@@ -19,9 +19,12 @@
             android:resizeableActivity="true"
             android:theme="@style/Theme.PeakPlays.NoActionBar"
             tools:targetApi="24">
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
