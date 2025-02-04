@@ -13,6 +13,11 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Bottom Navigation style -->
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <!-- Make the app full screen -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
     <style name="Theme.PeakPlays.NoActionBar">
@@ -29,15 +34,15 @@
         <item name="itemIconTint">@android:color/white</item>
         <item name="itemTextColor">@android:color/white</item>
         <item name="itemIconSize">28dp</item>
-        <item name="itemPaddingTop">4dp</item>
+        <item name="itemPaddingTop">6dp</item>
         <item name="itemTextAppearanceActive">@style/TextAppearance.App.BottomNavigation</item>
         <item name="itemTextAppearanceInactive">@style/TextAppearance.App.BottomNavigation</item>
         <item name="labelVisibilityMode">labeled</item>
-        <item name="itemPaddingBottom">0dp</item>
+        <item name="itemPaddingBottom">8dp</item>
         <item name="itemHorizontalTranslationEnabled">false</item>
         <item name="itemBackground">@null</item>
         <item name="itemRippleColor">@android:color/transparent</item>
-        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingBottom">8dp</item>
         <item name="android:spacing">16dp</item>
     </style>
 
@@ -48,6 +53,7 @@
 
     <style name="TextAppearance.App.BottomNavigation" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:lineSpacingExtra">0dp</item>
         <item name="android:letterSpacing">0</item>
     </style>

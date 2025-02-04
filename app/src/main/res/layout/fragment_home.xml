@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <!-- Remove the TextView with app_name -->
-    <!-- Add your main content here -->
+    <!-- Remove any score bar that might be here -->
+    <!-- Only keep your main content -->
 
 </androidx.constraintlayout.widget.ConstraintLayout> 
