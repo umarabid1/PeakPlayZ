@@ -1,6 +1,7 @@
 package com.example.peakplays
 
 import android.os.Bundle
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,6 +13,14 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        
+        // Configure bottom navigation for different screen sizes
+        if (resources.configuration.screenWidthDp >= 1240) {
+            bottomNavigation.layoutParams = bottomNavigation.layoutParams.apply {
+                height = ViewGroup.LayoutParams.WRAP_CONTENT
+            }
+        }
+
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
