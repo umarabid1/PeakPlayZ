@@ -23,4 +23,8 @@
         item
     </string>
     <string name="app_logo">App Logo</string>
+    <string name="home">Home</string>
+    <string name="news">News</string>
+    <string name="rosters">Rosters</string>
+    <string name="schedules">Schedules</string>
 </resources>
