@@ -29,9 +29,10 @@
                 app:tint="@android:color/white" />
 
             <TextView
+                android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Settings"
+                android:text="@string/settings"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/title_text_size"
                 android:textStyle="bold"
@@ -71,6 +72,31 @@
                 android:layout_height="wrap_content"
                 android:text="Enable Notifications"
                 android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/languageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language_title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/languageSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="@string/select_language"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 

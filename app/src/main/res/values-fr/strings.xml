@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PeakPlayz</string>
+    <string name="navigation_drawer_open">Ouvrir le menu</string>
+    <string name="navigation_drawer_close">Fermer le menu</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">En-tête de navigation</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="menu_transform">Transformer</string>
+    <string name="menu_reflow">Reflux</string>
+    <string name="menu_slideshow">Diaporama</string>
+    <string name="menu_settings">Paramètres</string>
+    <string name="menu_home">Accueil</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="lorem_ipsum">Lorem Ipsum est simplement un texte factice de l\'industrie de l\'impression et de la composition.</string>
+    <string name="fab_content_description">Représente une vue pour invoquer une action</string>
+    <string name="image_view_item_transform_content_description">Représente une vue d\'image dans l\'élément</string>
+    <string name="app_logo">Logo de l\'application</string>
+    <string name="home">Accueil</string>
+    <string name="news">Actualités</string>
+    <string name="rosters">Équipes</string>
+    <string name="schedules">Calendrier</string>
+    <string name="home_fragment_title">Fragment d\'accueil</string>
+    <string name="language_title">Langue</string>
+    <string name="select_language">Sélectionner la langue</string>
+    <string name="notifications">Notifications</string>
+    <string name="enable_notifications">Activer les notifications</string>
+    <string name="settings">Paramètres</string>
+    <!-- Other translations... -->
+</resources> 

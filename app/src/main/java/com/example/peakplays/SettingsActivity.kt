@@ -9,10 +9,14 @@ import android.provider.Settings
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivitySettingsBinding
+import com.example.peakplays.utils.LocaleHelper
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.TextView
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : BaseActivity() {
     private lateinit var binding: ActivitySettingsBinding
 
     private val requestPermissionLauncher = registerForActivityResult(
@@ -51,6 +55,9 @@ class SettingsActivity : AppCompatActivity() {
                 }
             }
         }
+
+        // Setup language selector
+        setupLanguageSelector()
     }
 
     private fun requestNotificationPermission() {
@@ -110,5 +117,53 @@ class SettingsActivity : AppCompatActivity() {
             .edit()
             .putBoolean("notifications_enabled", enabled)
             .apply()
+    }
+
+    private fun setupLanguageSelector() {
+        val languages = resources.getStringArray(R.array.languages)
+        val languageCodes = resources.getStringArray(R.array.language_codes)
+        val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, languages)
+        
+        (binding.languageSelector as? AutoCompleteTextView)?.apply {
+            setAdapter(arrayAdapter)
+            
+            // Set current language
+            val currentCode = LocaleHelper.getLanguageCode(this@SettingsActivity)
+            val currentIndex = languageCodes.indexOf(currentCode)
+            if (currentIndex >= 0) {
+                setText(languages[currentIndex], false)
+            }
+
+            setOnItemClickListener { _, _, position, _ ->
+                val selectedCode = languageCodes[position]
+                if (selectedCode != LocaleHelper.getLanguageCode(this@SettingsActivity)) {
+                    LocaleHelper.saveLanguageCode(this@SettingsActivity, selectedCode)
+                    // Update all activities
+                    val intent = Intent(this@SettingsActivity, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                    finish()
+                }
+            }
+        }
+    }
+
+    // Add this method to update UI text
+    private fun updateUIText() {
+        binding.apply {
+            // Update title in the app bar
+            appBarLayout.findViewById<TextView>(R.id.titleText)?.text = getString(R.string.settings)
+            // Update notifications text
+            notificationSwitch.text = getString(R.string.enable_notifications)
+            // Update language section title
+            languageTitle.text = getString(R.string.language_title)
+            // Update language selector hint
+            languageSelector.hint = getString(R.string.select_language)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateUIText()
     }
 } 
