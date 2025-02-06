@@ -2,12 +2,12 @@ package com.example.peakplays
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivityCreateAccountBinding
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 
-class CreateAccountActivity : AppCompatActivity() {
+class CreateAccountActivity : BaseActivity() {
     private lateinit var binding: ActivityCreateAccountBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -26,5 +26,17 @@
     <string name="notifications">Notificaciones</string>
     <string name="enable_notifications">Activar notificaciones</string>
     <string name="settings">Ajustes</string>
+    <!-- Sign In/Auth related strings -->
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="sign_in_title">Iniciar Sesión</string>
+    <string name="username_email">Usuario/Email:</string>
+    <string name="username_email_hint">Ingrese su usuario o email</string>
+    <string name="password">Contraseña:</string>
+    <string name="password_hint">Ingrese su contraseña</string>
+    <string name="forgot_password">¿Olvidó su contraseña?</string>
+    <string name="create_account_prompt">¿No tiene una cuenta?\nCree una aquí</string>
+    <string name="sign_in_button">Iniciar\nSesión</string>
     <!-- Other translations... -->
+    <string name="additional_leagues">¡Ligas Adicionales!</string>
+    <string name="live_score">¡Gran Evento! Marcador en Vivo</string>
 </resources> 

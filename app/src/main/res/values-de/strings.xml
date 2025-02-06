@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PeakPlayz</string>
+    <string name="navigation_drawer_open">Navigation öffnen</string>
+    <string name="navigation_drawer_close">Navigation schließen</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigations-Header</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="menu_home">Start</string>
+    <string name="home">Start</string>
+    <string name="news">Nachrichten</string>
+    <string name="rosters">Teams</string>
+    <string name="schedules">Spielplan</string>
+    <string name="settings">Einstellungen</string>
+    <string name="language_title">Sprache</string>
+    <string name="select_language">Sprache auswählen</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="enable_notifications">Benachrichtigungen aktivieren</string>
+    <string name="sign_in_button">Anmelden</string>
+    <string name="additional_leagues">Zusätzliche Ligen!</string>
+    <string name="live_score">Großes Event! Live-Score</string>
+    <string name="menu_transform">Transformieren</string>
+    <string name="menu_reflow">Neuanordnen</string>
+    <string name="menu_slideshow">Diashow</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="lorem_ipsum">Lorem Ipsum ist einfach ein Blindtext der Druck- und Satzindustrie.</string>
+    <string name="fab_content_description">Schwebende Aktionsschaltfläche</string>
+    <string name="image_view_item_transform_content_description">Transformationsbild</string>
+    <string name="app_logo">App-Logo</string>
+    <string name="home_fragment_title">Startseite</string>
+    <string name="sign_in">Anmelden</string>
+    <string name="sign_in_title">Anmeldung</string>
+    <string name="username_email">Benutzername/E-Mail:</string>
+    <string name="username_email_hint">Geben Sie Ihren Benutzernamen oder E-Mail ein</string>
+    <string name="password">Passwort:</string>
+    <string name="password_hint">Geben Sie Ihr Passwort ein</string>
+    <string name="forgot_password">Passwort vergessen?</string>
+    <string name="create_account_prompt">Noch kein Konto?\nHier erstellen</string>
+</resources> 

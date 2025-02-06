@@ -6,9 +6,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
@@ -19,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.SimpleDateFormat
 import java.util.*
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -91,7 +90,13 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun updateTime() {
-        val timeFormat = SimpleDateFormat("h:mm a", Locale.getDefault())
+        val timeFormat = SimpleDateFormat("h:mm a", Locale.getDefault()).apply {
+            timeZone = TimeZone.getDefault()
+            // Override the AM/PM markers to always use "am" and "pm"
+            val symbols = java.text.DateFormatSymbols(Locale.getDefault())
+            symbols.amPmStrings = arrayOf("am", "pm")
+            dateFormatSymbols = symbols
+        }
         findViewById<TextView>(R.id.timeText).text = timeFormat.format(Date())
     }
 
@@ -103,5 +108,15 @@ class HomeActivity : AppCompatActivity() {
                 handler.postDelayed(this, 60000) // Update every minute
             }
         })
+    }
+
+    private fun updateUIText() {
+        // Update existing UI text
+        binding.signInButton?.text = getString(R.string.sign_in_button)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateUIText()
     }
 }

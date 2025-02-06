@@ -3,10 +3,11 @@ package com.example.peakplays
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivitySignInBinding
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : BaseActivity() {
     private lateinit var binding: ActivitySignInBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,23 @@ class SignInActivity : AppCompatActivity() {
         // Setup create account button
         binding.createAccountButton.setOnClickListener {
             startActivity(Intent(this, CreateAccountActivity::class.java))
+        }
+    }
+
+    // Add this method to update UI text when language changes
+    override fun onResume() {
+        super.onResume()
+        updateUIText()
+    }
+
+    private fun updateUIText() {
+        binding.apply {
+            // Update title in the app bar
+            appBarLayout.findViewById<TextView>(R.id.titleText)?.text = getString(R.string.sign_in_title)
+            // Update buttons
+            signInButton.text = getString(R.string.sign_in)
+            forgotPasswordButton.text = getString(R.string.forgot_password)
+            createAccountButton.text = getString(R.string.create_account_prompt)
         }
     }
 } 

@@ -43,18 +43,26 @@ across the layout configurations
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/signInButton"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in_button"
                 android:minWidth="0dp"
-                android:paddingHorizontal="8dp"
-                android:text="Sign in"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="0dp"
                 android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:textSize="11sp"
+                android:maxLines="2"
+                android:gravity="center"
+                android:lineSpacingExtra="0dp"
+                app:rippleColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/settingsButton"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp" />
 
             <ImageButton
                 android:id="@+id/settingsButton"
@@ -109,7 +117,7 @@ across the layout configurations
             android:id="@+id/leagues_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Additional Leagues!"
+            android:text="@string/additional_leagues"
             android:textColor="@android:color/white"
             android:textSize="@dimen/leagues_text_size"
             android:textStyle="bold"
@@ -165,7 +173,7 @@ across the layout configurations
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Big Event! Live Score"
+            android:text="@string/live_score"
             android:textColor="@android:color/white"
             android:textSize="@dimen/score_text_size"
             android:textStyle="bold"

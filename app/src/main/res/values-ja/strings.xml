@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PeakPlayz</string>
+    <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">ナビゲーションヘッダー</string>
+    <string name="action_settings">設定</string>
+    <string name="menu_home">ホーム</string>
+    <string name="home">ホーム</string>
+    <string name="news">ニュース</string>
+    <string name="settings">設定</string>
+    <string name="sign_in_button">ログイン</string>
+    <string name="additional_leagues">追加リーグ！</string>
+    <string name="live_score">ビッグイベント！ライブスコア</string>
+    <string name="menu_transform">変換</string>
+    <string name="menu_reflow">リフロー</string>
+    <string name="menu_slideshow">スライドショー</string>
+    <string name="menu_settings">設定</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="lorem_ipsum">Lorem Ipsumは印刷・組版業界の標準的なダミーテキストです。</string>
+    <string name="fab_content_description">フローティングアクションボタン</string>
+    <string name="image_view_item_transform_content_description">変換画像</string>
+    <string name="app_logo">アプリロゴ</string>
+    <string name="rosters">チーム</string>
+    <string name="schedules">スケジュール</string>
+    <string name="home_fragment_title">ホーム</string>
+    <string name="language_title">言語</string>
+    <string name="select_language">言語を選択</string>
+    <string name="notifications">通知</string>
+    <string name="enable_notifications">通知を有効にする</string>
+    <string name="sign_in">ログイン</string>
+    <string name="sign_in_title">ログイン</string>
+    <string name="username_email">ユーザー名/メール：</string>
+    <string name="username_email_hint">ユーザー名またはメールを入力</string>
+    <string name="password">パスワード：</string>
+    <string name="password_hint">パスワードを入力</string>
+    <string name="forgot_password">パスワードをお忘れですか？</string>
+    <string name="create_account_prompt">アカウントをお持ちでない方は\nこちらで作成</string>
+</resources> 

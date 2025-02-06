@@ -2,10 +2,10 @@ package com.example.peakplays
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivityPasswordResetBinding
 
-class PasswordResetActivity : AppCompatActivity() {
+class PasswordResetActivity : BaseActivity() {
     private lateinit var binding: ActivityPasswordResetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

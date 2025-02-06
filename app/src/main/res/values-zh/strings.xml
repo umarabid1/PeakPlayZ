@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PeakPlayz</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">导航头部</string>
+    <string name="action_settings">设置</string>
+    <string name="menu_home">首页</string>
+    <string name="home">首页</string>
+    <string name="news">新闻</string>
+    <string name="settings">设置</string>
+    <string name="sign_in_button">登录</string>
+    <string name="additional_leagues">更多联赛！</string>
+    <string name="live_score">重大赛事！实时比分</string>
+    <string name="menu_transform">转换</string>
+    <string name="menu_reflow">重排</string>
+    <string name="menu_slideshow">幻灯片</string>
+    <string name="menu_settings">设置</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="lorem_ipsum">Lorem Ipsum是印刷和排版行业的标准虚拟文本。</string>
+    <string name="fab_content_description">浮动操作按钮</string>
+    <string name="image_view_item_transform_content_description">转换图片</string>
+    <string name="app_logo">应用标志</string>
+    <string name="rosters">球队</string>
+    <string name="schedules">赛程</string>
+    <string name="home_fragment_title">首页</string>
+    <string name="language_title">语言</string>
+    <string name="select_language">选择语言</string>
+    <string name="notifications">通知</string>
+    <string name="enable_notifications">启用通知</string>
+    <string name="sign_in">登录</string>
+    <string name="sign_in_title">登录</string>
+    <string name="username_email">用户名/邮箱：</string>
+    <string name="username_email_hint">输入用户名或邮箱</string>
+    <string name="password">密码：</string>
+    <string name="password_hint">输入密码</string>
+    <string name="forgot_password">忘记密码？</string>
+    <string name="create_account_prompt">没有账号？\n在此创建</string>
+</resources> 
