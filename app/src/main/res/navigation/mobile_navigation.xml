@@ -26,6 +26,12 @@
         android:name="com.example.peakplays.SchedulesFragment"
         android:label="@string/schedules" />
     
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.peakplays.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+    
     <!-- Add your navigation destinations here -->
     
 </navigation> 

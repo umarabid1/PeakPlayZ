@@ -38,4 +38,10 @@
     <string name="password_hint">输入密码</string>
     <string name="forgot_password">忘记密码？</string>
     <string name="create_account_prompt">没有账号？\n在此创建</string>
+    <string name="changing_language">正在更改语言…</string>
+    <string name="enable_notifications_message">要接收通知，您需要在系统设置中启用它们。</string>
+    <string name="disable_notifications_message">要禁用通知，您需要在系统设置中关闭它们。</string>
+    <string name="cancel">取消</string>
+    <string name="keep_enabled">保持启用</string>
+    <string name="disable_notifications">禁用通知</string>
 </resources> 

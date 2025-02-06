@@ -72,4 +72,12 @@
 
     <string name="additional_leagues">Additional Leagues!</string>
     <string name="live_score">Big Event! Live Score</string>
+
+    <string name="enable_notifications_message">To receive notifications, you need to enable them in system settings.</string>
+    <string name="disable_notifications_message">To disable notifications, you need to turn them off in system settings.</string>
+    <string name="cancel">Cancel</string>
+    <string name="keep_enabled">Keep Enabled</string>
+    <string name="disable_notifications">Disable Notifications</string>
+
+    <string name="changing_language">Changing language…</string>
 </resources>

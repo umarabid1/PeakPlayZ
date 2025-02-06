@@ -3,6 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:ellipsize="end"
-    android:maxLines="1"
-    android:textAppearance="?attr/textAppearanceSubtitle1"/> 
+    android:textSize="16sp"
+    android:textColor="@android:color/black"
+    android:background="?android:attr/selectableItemBackground" /> 

@@ -38,4 +38,10 @@
     <string name="password_hint">パスワードを入力</string>
     <string name="forgot_password">パスワードをお忘れですか？</string>
     <string name="create_account_prompt">アカウントをお持ちでない方は\nこちらで作成</string>
+    <string name="changing_language">言語を変更中…</string>
+    <string name="enable_notifications_message">通知を受け取るには、システム設定で有効にする必要があります。</string>
+    <string name="disable_notifications_message">通知を無効にするには、システム設定でオフにする必要があります。</string>
+    <string name="cancel">キャンセル</string>
+    <string name="keep_enabled">有効のままにする</string>
+    <string name="disable_notifications">通知を無効にする</string>
 </resources> 

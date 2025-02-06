@@ -2,28 +2,30 @@ package com.example.peakplays.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import android.os.Build
-import java.util.*
+import java.util.Locale
 
 object LocaleHelper {
-    fun setLocale(context: Context, languageCode: String): Context {
-        val locale = Locale(languageCode)
+    private const val PREFS_NAME = "app_preferences"
+    private const val PREF_LANGUAGE = "selected_language"
+
+    fun setLocale(context: Context): Context {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val language = prefs.getString(PREF_LANGUAGE, "en") ?: "en"
+        return updateResources(context, language)
+    }
+
+    private fun updateResources(context: Context, language: String): Context {
+        val locale = when (language) {
+            "zh" -> Locale.CHINESE
+            "ja" -> Locale.JAPANESE
+            "ko" -> Locale.KOREAN
+            else -> Locale(language)
+        }
         Locale.setDefault(locale)
 
-        val config = Configuration(context.resources.configuration)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            config.setLocale(locale)
-        } else {
-            @Suppress("DEPRECATION")
-            config.locale = locale
-        }
-
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            context.createConfigurationContext(config)
-        } else {
-            context.resources.updateConfiguration(config, context.resources.displayMetrics)
-            context
-        }
+        val configuration = Configuration(context.resources.configuration)
+        configuration.setLocale(locale)
+        return context.createConfigurationContext(configuration)
     }
 
     fun getLanguageCode(context: Context): String {

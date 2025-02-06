@@ -38,4 +38,10 @@
     <string name="password_hint">비밀번호 입력</string>
     <string name="forgot_password">비밀번호를 잊으셨나요?</string>
     <string name="create_account_prompt">계정이 없으신가요?\n여기서 만드세요</string>
+    <string name="changing_language">언어 변경 중…</string>
+    <string name="enable_notifications_message">알림을 받으려면 시스템 설정에서 활성화해야 합니다.</string>
+    <string name="disable_notifications_message">알림을 비활성화하려면 시스템 설정에서 끄셔야 합니다.</string>
+    <string name="cancel">취소</string>
+    <string name="keep_enabled">활성화 유지</string>
+    <string name="disable_notifications">알림 비활성화</string>
 </resources> 

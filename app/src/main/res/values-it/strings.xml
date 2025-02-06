@@ -38,4 +38,10 @@
     <string name="password_hint">Inserisci la password</string>
     <string name="forgot_password">Password dimenticata?</string>
     <string name="create_account_prompt">Non hai un account?\nCreane uno qui</string>
+    <string name="changing_language">Cambio lingua…</string>
+    <string name="enable_notifications_message">Per ricevere le notifiche, devi attivarle nelle impostazioni di sistema.</string>
+    <string name="disable_notifications_message">Per disattivare le notifiche, devi disattivarle nelle impostazioni di sistema.</string>
+    <string name="cancel">Annulla</string>
+    <string name="keep_enabled">Mantieni attivo</string>
+    <string name="disable_notifications">Disattiva notifiche</string>
 </resources> 

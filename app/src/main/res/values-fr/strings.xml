@@ -39,4 +39,10 @@
     <!-- Other translations... -->
     <string name="additional_leagues">Ligues Supplémentaires !</string>
     <string name="live_score">Grand Événement ! Score en Direct</string>
+    <string name="changing_language">Changement de langue…</string>
+    <string name="enable_notifications_message">Pour recevoir des notifications, vous devez les activer dans les paramètres système.</string>
+    <string name="disable_notifications_message">Pour désactiver les notifications, vous devez les désactiver dans les paramètres système.</string>
+    <string name="cancel">Annuler</string>
+    <string name="keep_enabled">Garder activé</string>
+    <string name="disable_notifications">Désactiver les notifications</string>
 </resources> 
