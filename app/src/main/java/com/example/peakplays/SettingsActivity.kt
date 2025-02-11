@@ -1,8 +1,7 @@
 package com.example.peakplays
 
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowInsetsController
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.peakplays.databinding.ActivitySettingsBinding
 import com.example.peakplays.ui.settings.SettingsFragment
@@ -21,15 +20,15 @@ class SettingsActivity : AppCompatActivity() {
                 .commit()
         }
 
-        // Set up back button using the new onBackPressedDispatcher
+        // Set up back button
         binding.backButton.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            onBackPressed()
         }
 
-        // Hide system UI navigation using the new WindowInsetsController
-        window.insetsController?.let { controller ->
-            controller.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-            controller.hide(WindowInsets.Type.systemBars())
-        }
+        // Hide system UI navigation
+        @Suppress("DEPRECATION")
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
     }
 } 

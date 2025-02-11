@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="16dp"
-            android:text="@string/leagues_header"
+            android:text="Leagues"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_1"
+                android:text="1"
                 app:layout_gravity="fill"
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1"/>
@@ -56,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_2"/>
+                android:text="2"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button3"
@@ -64,7 +64,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_3"/>
+                android:text="3"/>
         </TableRow>
 
         <TableRow android:layout_width="match_parent">
@@ -74,7 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_4"/>
+                android:text="4"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button5"
@@ -82,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_5"/>
+                android:text="5"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button6"
@@ -90,7 +90,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_6"/>
+                android:text="6"/>
         </TableRow>
 
         <TableRow android:layout_width="match_parent">
@@ -100,7 +100,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_7"/>
+                android:text="7"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button8"
@@ -108,7 +108,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_8"/>
+                android:text="8"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button9"
@@ -116,7 +116,7 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="@string/league_9"/>
+                android:text="9"/>
         </TableRow>
 
     </TableLayout>
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="16dp"
-            android:text="@string/headlines_header"
+            android:text="Top Headlines"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -157,7 +157,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_1"
+            android:text="▶ Headline 1: Eagles win Super Bowl in dramatic fashion"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_2"
+            android:text="▶ Headline 2: Lakers secure playoff spot with crucial victory"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -173,7 +173,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_3"
+            android:text="▶ Headline 3: Manchester United signs new star striker"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -181,7 +181,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_4"
+            android:text="▶ Headline 4: Tennis star advances to Wimbledon finals"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -189,7 +189,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_5"
+            android:text="▶ Headline 5: MLB announces major rule changes for next season"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -197,7 +197,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_6"
+            android:text="▶ Headline 6: NHL team makes historic comeback in playoffs"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -205,7 +205,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_7"
+            android:text="▶ Headline 7: Formula 1 champion sets new track record"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -213,7 +213,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_8"
+            android:text="▶ Headline 8: Golf prodigy wins first major tournament"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -221,7 +221,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_9"
+            android:text="▶ Headline 9: Olympic committee announces new event categories"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -229,21 +229,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/headline_10"
+            android:text="▶ Headline 10: Cricket world cup final sets viewership record"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
 
     </LinearLayout>
-
-    <!-- Add contentDescription to images -->
-    <!-- Remove this ImageView if not needed -->
-    <ImageView
-        android:id="@+id/someImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/image_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout> 

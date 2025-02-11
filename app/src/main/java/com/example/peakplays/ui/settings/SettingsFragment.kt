@@ -123,8 +123,9 @@ class SettingsFragment : Fragment() {
         val config = context.resources.configuration
         config.setLocale(locale)
         
-        // Just update the resources configuration
-        resources.configuration.setLocale(locale)
+        // Create new context with updated configuration
+        val newContext = context.createConfigurationContext(config)
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
 
         // Show a brief message that language is changing
         Toast.makeText(context, getString(R.string.changing_language), Toast.LENGTH_SHORT).show()

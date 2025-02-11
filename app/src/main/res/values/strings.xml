@@ -116,37 +116,4 @@
     <string name="country_hint">Select your country</string>
 
     <string name="favorite_teams_leagues">Favorite Teams/Leagues</string>
-
-    <!-- League Section -->
-    <string name="leagues_header">Leagues</string>
-    <string name="league_content">League content will go here</string>
-
-    <!-- League Numbers -->
-    <string name="league_1">1</string>
-    <string name="league_2">2</string>
-    <string name="league_3">3</string>
-    <string name="league_4">4</string>
-    <string name="league_5">5</string>
-    <string name="league_6">6</string>
-    <string name="league_7">7</string>
-    <string name="league_8">8</string>
-    <string name="league_9">9</string>
-
-    <!-- Headlines -->
-    <string name="headline_1">▶ Headline 1: Eagles win Super Bowl in dramatic fashion</string>
-    <string name="headline_2">▶ Headline 2: Lakers secure playoff spot with crucial victory</string>
-    <string name="headline_3">▶ Headline 3: Manchester United signs new star striker</string>
-    <string name="headline_4">▶ Headline 4: Tennis star advances to Wimbledon finals</string>
-    <string name="headline_5">▶ Headline 5: MLB announces major rule changes for next season</string>
-    <string name="headline_6">▶ Headline 6: NHL team makes historic comeback in playoffs</string>
-    <string name="headline_7">▶ Headline 7: Formula 1 champion sets new track record</string>
-    <string name="headline_8">▶ Headline 8: Golf prodigy wins first major tournament</string>
-    <string name="headline_9">▶ Headline 9: Olympic committee announces new event categories</string>
-    <string name="headline_10">▶ Headline 10: Cricket world cup final sets viewership record</string>
-
-    <!-- Add this string -->
-    <string name="headlines_header">Top Headlines</string>
-
-    <!-- Add this string -->
-    <string name="image_description">League image</string>
 </resources>
