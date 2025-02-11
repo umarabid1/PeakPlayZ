@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account Creation"
+                android:text="@string/create_account_title"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/title_text_size"
                 android:textStyle="bold"
@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First Name:"
+                android:text="@string/first_name"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:hint="Enter your first name"/>
+                    android:hint="@string/first_name_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last Name:"
+                android:text="@string/last_name"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -100,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:hint="Enter your last name"/>
+                    android:hint="@string/last_name_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +108,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email:"
+                android:text="@string/email"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -124,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="Enter your email"/>
+                    android:hint="@string/email_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +132,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone Number:"
+                android:text="@string/phone_number"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -148,7 +148,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
-                    android:hint="Enter your phone number"/>
+                    android:hint="@string/phone_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +156,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Country of Residence:"
+                android:text="@string/country"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -172,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
-                    android:hint="Select your country"/>
+                    android:hint="@string/country_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -180,7 +180,7 @@
                 android:id="@+id/createAccountButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Create Account"
+                android:text="@string/create_account_button"
                 android:textSize="16sp"
                 android:padding="12dp"
                 android:backgroundTint="@color/button_color"/>

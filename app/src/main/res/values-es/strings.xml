@@ -45,4 +45,38 @@
     <string name="cancel">Cancelar</string>
     <string name="keep_enabled">Mantener activado</string>
     <string name="disable_notifications">Desactivar notificaciones</string>
+    <!-- Password Reset Page -->
+    <string name="reset_password_title">Restablecer Contraseña</string>
+    <string name="reset_password_instruction">Ingrese su correo electrónico para restablecer su contraseña</string>
+    <string name="email_address">Correo Electrónico:</string>
+    <string name="email_hint">Ingrese su correo electrónico</string>
+    <string name="reset_password_button">Restablecer Contraseña</string>
+    <string name="back_to_sign_in">Volver a Iniciar Sesión</string>
+    <string name="reset_email_sent">Se ha enviado el correo de restablecimiento</string>
+    <string name="reset_email_error">Error al enviar el correo de restablecimiento</string>
+
+    <!-- Create Account Page -->
+    <string name="create_account_title">Crear Cuenta</string>
+    <string name="full_name">Nombre Completo:</string>
+    <string name="full_name_hint">Ingrese su nombre completo</string>
+    <string name="email">Correo Electrónico:</string>
+    <string name="confirm_password">Confirmar Contraseña:</string>
+    <string name="confirm_password_hint">Confirme su contraseña</string>
+    <string name="create_account_button">Crear Cuenta</string>
+    <string name="already_have_account">¿Ya tiene una cuenta? Inicie sesión aquí</string>
+    <string name="passwords_dont_match">Las contraseñas no coinciden</string>
+    <string name="account_created">Cuenta creada exitosamente</string>
+    <string name="account_creation_error">Error al crear la cuenta</string>
+
+    <!-- Add before the closing </resources> -->
+    <string name="first_name">Nombre:</string>
+    <string name="first_name_hint">Ingrese su nombre</string>
+    <string name="last_name">Apellido:</string>
+    <string name="last_name_hint">Ingrese su apellido</string>
+    <string name="phone_number">Número de Teléfono:</string>
+    <string name="phone_hint">Ingrese su número de teléfono</string>
+    <string name="country">País de Residencia:</string>
+    <string name="country_hint">Seleccione su país</string>
+    <string name="title_home">Inicio</string>
+    <string name="favorite_teams_leagues">Equipos/Ligas Favoritos</string>
 </resources> 
