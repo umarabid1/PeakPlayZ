@@ -4,21 +4,29 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.peakplays.base.BaseActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.peakplays.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class SignInActivity : BaseActivity() {
+class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Initialize FirebaseAuth
-        firebaseAuth = FirebaseAuth.getInstance()
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+
+        // Check if user is already signed in
+        if (auth.currentUser != null) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }
 
         // Hide system UI navigation
         @Suppress("DEPRECATION")
@@ -31,63 +39,47 @@ class SignInActivity : BaseActivity() {
             finish()
         }
 
-        // Setup sign-in button
-        binding.signInButton.setOnClickListener {
-            val email = binding.usernameInput.text.toString().trim()
-            val password = binding.passwordInput.text.toString().trim()
+        setupClickListeners()
+    }
 
-            if (validateInput(email, password)) {
-                signInWithEmailAndPassword(email, password)
+    private fun setupClickListeners() {
+        binding.signInButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString()
+            val password = binding.passwordEditText.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                signIn(email, password)
+            } else {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Setup forgot password button
-        binding.forgotPasswordButton.setOnClickListener {
-            startActivity(Intent(this, PasswordResetActivity::class.java))
-        }
-
-        // Setup create account button
         binding.createAccountButton.setOnClickListener {
             startActivity(Intent(this, CreateAccountActivity::class.java))
         }
+
+        binding.forgotPasswordButton.setOnClickListener {
+            startActivity(Intent(this, PasswordResetActivity::class.java))
+        }
     }
 
-    private fun validateInput(email: String, password: String): Boolean {
-        if (email.isEmpty()) {
-            binding.usernameInput.error = "Email is required"
-            return false
-        }
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.usernameInput.error = "Enter a valid email"
-            return false
-        }
-        if (password.isEmpty()) {
-            binding.passwordInput.error = "Password is required"
-            return false
-        }
-        if (password.length < 6) {
-            binding.passwordInput.error = "Password must be at least 6 characters"
-            return false
-        }
-        return true
-    }
-
-    private fun signInWithEmailAndPassword(email: String, password: String) {
-        binding.progressBar.visibility = View.VISIBLE
-
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                binding.progressBar.visibility = View.GONE
+    private fun signIn(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign-in success
-                    Toast.makeText(this, "Sign-in successful!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish() // Close the sign-in activity
+                    // Sign in success, update UI with the signed-in user's information
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
                 } else {
-                    // Sign-in failed
-                    Toast.makeText(this, "Sign-in failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(
+                        baseContext,
+                        "Authentication failed: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 }
+
 
