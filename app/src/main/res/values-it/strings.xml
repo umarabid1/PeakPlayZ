@@ -44,4 +44,36 @@
     <string name="cancel">Annulla</string>
     <string name="keep_enabled">Mantieni attivo</string>
     <string name="disable_notifications">Disattiva notifiche</string>
+    <!-- Password Reset Page -->
+    <string name="reset_password_title">Reimposta Password</string>
+    <string name="reset_password_instruction">Inserisci il tuo indirizzo email per reimpostare la password</string>
+    <string name="email_address">Indirizzo Email:</string>
+    <string name="email_hint">Inserisci la tua email</string>
+    <string name="reset_password_button">Reimposta Password</string>
+    <string name="back_to_sign_in">Torna al Login</string>
+    <string name="reset_email_sent">Email di reimpostazione inviata</string>
+    <string name="reset_email_error">Errore nell\'invio dell\'email</string>
+
+    <!-- Create Account Page -->
+    <string name="create_account_title">Crea Account</string>
+    <string name="full_name">Nome Completo:</string>
+    <string name="full_name_hint">Inserisci il tuo nome completo</string>
+    <string name="email">Email:</string>
+    <string name="confirm_password">Conferma Password:</string>
+    <string name="confirm_password_hint">Conferma la tua password</string>
+    <string name="create_account_button">Crea Account</string>
+    <string name="already_have_account">Hai già un account? Accedi qui</string>
+    <string name="passwords_dont_match">Le password non corrispondono</string>
+    <string name="account_created">Account creato con successo</string>
+    <string name="account_creation_error">Errore nella creazione dell\'account</string>
+    <string name="first_name">Nome:</string>
+    <string name="first_name_hint">Inserisci il tuo nome</string>
+    <string name="last_name">Cognome:</string>
+    <string name="last_name_hint">Inserisci il tuo cognome</string>
+    <string name="phone_number">Numero di Telefono:</string>
+    <string name="phone_hint">Inserisci il tuo numero di telefono</string>
+    <string name="country">Paese di Residenza:</string>
+    <string name="country_hint">Seleziona il tuo paese</string>
+    <string name="title_home">Home</string>
+    <string name="favorite_teams_leagues">Squadre/Leghe Preferite</string>
 </resources> 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PeakPlayz</string>
+    <string name="app_name">PeakPlays</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -70,7 +70,7 @@
     <string name="create_account_prompt">Don\'t have an account?\nCreate one here</string>
     <string name="sign_in_button">Sign In</string>
 
-    <string name="additional_leagues">Additional Leagues!</string>
+    <string name="additional_leagues">Favorite Teams/Leagues</string>
     <string name="live_score">Big Event! Live Score</string>
 
     <string name="enable_notifications_message">To receive notifications, you need to enable them in system settings.</string>
@@ -80,4 +80,73 @@
     <string name="disable_notifications">Disable Notifications</string>
 
     <string name="changing_language">Changing language…</string>
+
+    <string name="title_home">Home</string>
+
+    <!-- Password Reset Page -->
+    <string name="reset_password_title">Reset Password</string>
+    <string name="reset_password_instruction">Enter your email address to reset your password</string>
+    <string name="email_address">Email Address:</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="reset_password_button">Reset Password</string>
+    <string name="back_to_sign_in">Back to Sign In</string>
+    <string name="reset_email_sent">Password reset email has been sent</string>
+    <string name="reset_email_error">Error sending reset email</string>
+
+    <!-- Create Account Page -->
+    <string name="create_account_title">Create Account</string>
+    <string name="full_name">Full Name:</string>
+    <string name="full_name_hint">Enter your full name</string>
+    <string name="email">Email:</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="confirm_password_hint">Confirm your password</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="already_have_account">Already have an account? Sign in here</string>
+    <string name="passwords_dont_match">Passwords don\'t match</string>
+    <string name="account_created">Account created successfully</string>
+    <string name="account_creation_error">Error creating account</string>
+
+    <string name="first_name">First Name:</string>
+    <string name="first_name_hint">Enter your first name</string>
+    <string name="last_name">Last Name:</string>
+    <string name="last_name_hint">Enter your last name</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="phone_hint">Enter your phone number</string>
+    <string name="country">Country of Residence:</string>
+    <string name="country_hint">Select your country</string>
+
+    <string name="favorite_teams_leagues">Favorite Teams/Leagues</string>
+
+    <!-- League Section -->
+    <string name="leagues_header">Leagues</string>
+    <string name="league_content">League content will go here</string>
+
+    <!-- League Numbers -->
+    <string name="league_1">1</string>
+    <string name="league_2">2</string>
+    <string name="league_3">3</string>
+    <string name="league_4">4</string>
+    <string name="league_5">5</string>
+    <string name="league_6">6</string>
+    <string name="league_7">7</string>
+    <string name="league_8">8</string>
+    <string name="league_9">9</string>
+
+    <!-- Headlines -->
+    <string name="headline_1">▶ Headline 1: Eagles win Super Bowl in dramatic fashion</string>
+    <string name="headline_2">▶ Headline 2: Lakers secure playoff spot with crucial victory</string>
+    <string name="headline_3">▶ Headline 3: Manchester United signs new star striker</string>
+    <string name="headline_4">▶ Headline 4: Tennis star advances to Wimbledon finals</string>
+    <string name="headline_5">▶ Headline 5: MLB announces major rule changes for next season</string>
+    <string name="headline_6">▶ Headline 6: NHL team makes historic comeback in playoffs</string>
+    <string name="headline_7">▶ Headline 7: Formula 1 champion sets new track record</string>
+    <string name="headline_8">▶ Headline 8: Golf prodigy wins first major tournament</string>
+    <string name="headline_9">▶ Headline 9: Olympic committee announces new event categories</string>
+    <string name="headline_10">▶ Headline 10: Cricket world cup final sets viewership record</string>
+
+    <!-- Add this string -->
+    <string name="headlines_header">Top Headlines</string>
+
+    <!-- Add this string -->
+    <string name="image_description">League image</string>
 </resources>

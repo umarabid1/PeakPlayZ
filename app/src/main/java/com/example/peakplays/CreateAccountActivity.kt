@@ -2,10 +2,10 @@ package com.example.peakplays
 
 import android.os.Bundle
 import android.view.View
-import com.example.peakplays.base.BaseActivity
-import com.example.peakplays.databinding.ActivityCreateAccountBinding
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import com.example.peakplays.base.BaseActivity
+import com.example.peakplays.databinding.ActivityCreateAccountBinding
 
 class CreateAccountActivity : BaseActivity() {
     private lateinit var binding: ActivityCreateAccountBinding

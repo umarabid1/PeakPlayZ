@@ -44,4 +44,35 @@
     <string name="cancel">キャンセル</string>
     <string name="keep_enabled">有効のままにする</string>
     <string name="disable_notifications">通知を無効にする</string>
+    <!-- Password Reset Page -->
+    <string name="reset_password_title">パスワードのリセット</string>
+    <string name="reset_password_instruction">パスワードをリセットするためのメールアドレスを入力してください</string>
+    <string name="email_address">メールアドレス：</string>
+    <string name="email_hint">メールアドレスを入力</string>
+    <string name="reset_password_button">パスワードをリセット</string>
+    <string name="back_to_sign_in">ログインに戻る</string>
+    <string name="reset_email_sent">リセット用メールを送信しました</string>
+    <string name="reset_email_error">メール送信中にエラーが発生しました</string>
+    <!-- Create Account Page -->
+    <string name="create_account_title">アカウント作成</string>
+    <string name="full_name">氏名：</string>
+    <string name="full_name_hint">氏名を入力</string>
+    <string name="email">メール</string>
+    <string name="confirm_password">パスワードの確認：</string>
+    <string name="confirm_password_hint">パスワードを再入力</string>
+    <string name="create_account_button">アカウントを作成</string>
+    <string name="already_have_account">既にアカウントをお持ちですか？こちらからログイン</string>
+    <string name="passwords_dont_match">パスワードが一致しません</string>
+    <string name="account_created">アカウントが作成されました</string>
+    <string name="account_creation_error">アカウント作成中にエラーが発生しました</string>
+    <string name="first_name">名：</string>
+    <string name="first_name_hint">名を入力</string>
+    <string name="last_name">姓：</string>
+    <string name="last_name_hint">姓を入力</string>
+    <string name="phone_number">電話番号：</string>
+    <string name="phone_hint">電話番号を入力</string>
+    <string name="country">居住国：</string>
+    <string name="country_hint">国を選択</string>
+    <string name="title_home">ホーム</string>
+    <string name="favorite_teams_leagues">お気に入りのチーム/リーグ</string>
 </resources> 
