@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "109276956007",
+    "firebase_url": "https://peakplaz-default-rtdb.firebaseio.com",
+    "project_id": "peakplaz",
+    "storage_bucket": "peakplaz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109276956007:android:de4cd45a7849013e5c1bc2",
+        "android_client_info": {
+          "package_name": "com.example.peakplays"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-9NApPv8aE6RaJDbuZcPCNyOiGIZ5wPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
