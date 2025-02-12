@@ -141,4 +141,7 @@
     <string name="league_button_7">Tennis</string>
     <string name="league_button_8">Golf</string>
     <string name="league_button_9">UFC</string>
+
+    <string name="set_password">Set Password:</string>
+    <string name="set_password_hint">Create your password</string>
 </resources>

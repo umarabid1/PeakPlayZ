@@ -18,6 +18,7 @@ import com.example.peakplays.R
 import com.example.peakplays.databinding.FragmentSettingsBinding
 import java.util.Locale
 import android.widget.Toast
+import com.example.peakplays.utils.LocaleHelper
 
 class SettingsFragment : Fragment() {
 
@@ -28,9 +29,9 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
     private val TAG = "SettingsFragment"
-    private val PREFS_NAME = "app_preferences"
+    private val PREFS_NAME = "settings"
     private val PREF_NOTIFICATIONS = "notifications_enabled"
-    private val PREF_LANGUAGE = "selected_language"
+    private val PREF_LANGUAGE = "language_code"
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -86,8 +87,7 @@ class SettingsFragment : Fragment() {
         binding.languageSelector.setOnItemClickListener { _, _, position, _ ->
             val selectedLanguageCode = languageCodes[position]
             if (selectedLanguageCode != savedLanguageCode) {
-                saveLanguagePreference(selectedLanguageCode)
-                // Post the recreate call to allow the dropdown to close properly
+                LocaleHelper.saveLanguageCode(requireContext(), selectedLanguageCode)
                 binding.root.post {
                     updateAppLanguage(selectedLanguageCode)
                 }
@@ -103,45 +103,21 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    private fun saveLanguagePreference(languageCode: String) {
-        requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .edit()
-            .putString(PREF_LANGUAGE, languageCode)
-            .apply()
-    }
-
     private fun updateAppLanguage(languageCode: String) {
-        val locale = when (languageCode) {
-            "zh" -> Locale.CHINESE
-            "ja" -> Locale.JAPANESE
-            "ko" -> Locale.KOREAN
-            else -> Locale(languageCode)
-        }
-
-        Locale.setDefault(locale)
-        val context = requireContext()
-        val config = context.resources.configuration
-        config.setLocale(locale)
-        
-        // Create new context with updated configuration
-        val newContext = context.createConfigurationContext(config)
-        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+        // Use LocaleHelper to save and update the locale
+        LocaleHelper.saveLanguageCode(requireContext(), languageCode)
 
         // Show a brief message that language is changing
         Toast.makeText(context, getString(R.string.changing_language), Toast.LENGTH_SHORT).show()
 
-        // Use a handler to post the restart
+        // Restart the app
         Handler(Looper.getMainLooper()).postDelayed({
-            // Restart the entire app instead of just the activity
-            context.packageManager.getLaunchIntentForPackage(context.packageName)?.let { intent ->
+            context?.packageManager?.getLaunchIntentForPackage(requireContext().packageName)?.let { intent ->
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
                 requireActivity().finish()
-            } ?: run {
-                // If getLaunchIntentForPackage returns null, fallback to recreating the activity
-                requireActivity().recreate()
             }
         }, 500)
     }

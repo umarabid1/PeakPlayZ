@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CircularButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">50dp</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="rippleColor">@color/blue_button</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:clipToOutline">true</item>
+    </style>
+</resources> 

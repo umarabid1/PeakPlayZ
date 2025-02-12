@@ -3,48 +3,82 @@ package com.example.peakplays.utils
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
+import android.os.LocaleList
+import android.util.Log
 import java.util.Locale
 
 object LocaleHelper {
-    private const val PREFS_NAME = "settings"
-    private const val PREF_LANGUAGE = "language_code"
+    const val PREFS_NAME = "settings"
+    const val PREF_LANGUAGE = "language_code"
+    private const val TAG = "LocaleHelper"
 
     fun setLocale(context: Context): Context {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val language = prefs.getString(PREF_LANGUAGE, "en") ?: "en"
-        return updateResources(context, language)
-    }
+        val language = prefs.getString(PREF_LANGUAGE, null) 
+            ?: context.resources.configuration.locales[0].language
 
-    private fun updateResources(context: Context, language: String): Context {
+        Log.d(TAG, "Setting locale - Saved preference: ${prefs.getString(PREF_LANGUAGE, null)}")
+        Log.d(TAG, "Setting locale - Current language: $language")
+        Log.d(TAG, "Setting locale - Current locale: ${context.resources.configuration.locales[0]}")
+
         val locale = when (language) {
-            "zh" -> Locale.CHINESE
-            "ja" -> Locale.JAPANESE
-            "ko" -> Locale.KOREAN
+            "zh" -> Locale.SIMPLIFIED_CHINESE
+            "ja" -> Locale.JAPAN
+            "ko" -> Locale.KOREA
             else -> Locale(language)
         }
+
+        Log.d(TAG, "Setting locale - New locale: $locale")
         Locale.setDefault(locale)
 
-        val config = context.resources.configuration
-        config.setLocale(locale)
-        
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            context.createConfigurationContext(config)
+        val config = Configuration(context.resources.configuration)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            config.setLocales(localeList)
         } else {
+            @Suppress("DEPRECATION")
             config.locale = locale
-            context.resources.updateConfiguration(config, context.resources.displayMetrics)
-            context
         }
+
+        val newContext = context.createConfigurationContext(config)
+        Log.d(TAG, "Final context locale: ${newContext.resources.configuration.locales[0]}")
+        return newContext
     }
 
     fun getLanguageCode(context: Context): String {
-        return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .getString(PREF_LANGUAGE, "en") ?: "en"
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val saved = prefs.getString(PREF_LANGUAGE, null)
+        val default = context.resources.configuration.locales[0].language
+        Log.d(TAG, "Getting language code - Saved: $saved, Default: $default")
+        return saved ?: default
     }
 
     fun saveLanguageCode(context: Context, languageCode: String) {
-        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .edit()
+        Log.d(TAG, "Saving language code: $languageCode")
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit()
             .putString(PREF_LANGUAGE, languageCode)
-            .apply()
+            .commit()  // Use commit() instead of apply() to ensure immediate write
+        
+        // Verify the save
+        val savedValue = prefs.getString(PREF_LANGUAGE, null)
+        Log.d(TAG, "Verified saved language code: $savedValue")
+
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        
+        val config = Configuration(context.resources.configuration)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            config.setLocales(localeList)
+        } else {
+            @Suppress("DEPRECATION")
+            config.locale = locale
+        }
+        
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+        Log.d(TAG, "After save - Current locale: ${context.resources.configuration.locales[0]}")
     }
 } 
