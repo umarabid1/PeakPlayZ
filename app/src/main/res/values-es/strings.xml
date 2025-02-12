@@ -37,7 +37,7 @@
     <string name="create_account_prompt">¿No tiene una cuenta?\nCree una aquí</string>
     <string name="sign_in_button">Iniciar\nSesión</string>
     <!-- Other translations... -->
-    <string name="additional_leagues">¡Ligas Adicionales!</string>
+    <string name="additional_leagues">¡Equipos/Ligas Favoritos!</string>
     <string name="live_score">¡Gran Evento! Marcador en Vivo</string>
     <string name="changing_language">Cambiando idioma…</string>
     <string name="enable_notifications_message">Para recibir notificaciones, debe habilitarlas en la configuración del sistema.</string>
@@ -79,4 +79,29 @@
     <string name="country_hint">Seleccione su país</string>
     <string name="title_home">Inicio</string>
     <string name="favorite_teams_leagues">Equipos/Ligas Favoritos</string>
+    
+    <!-- Home page headers -->
+    <string name="leagues_header">Ligas</string>
+    <string name="top_headlines_header">Titulares Principales</string>
+    <string name="headline_1">El Manchester United logra una victoria dramática en los últimos minutos</string>
+    <string name="headline_2">Los Lakers dominan a los Warriors en el partido inaugural</string>
+    <string name="headline_3">Roger Federer anuncia nuevo programa de desarrollo del tenis</string>
+    <string name="headline_4">Playoffs MLB: Sorpresa inesperada en la serie divisional</string>
+    <string name="headline_5">Fórmula 1: Nuevos récords de pista establecidos en la clasificación</string>
+    <string name="headline_6">Liga de Campeones: Resultados sorprendentes alteran la clasificación</string>
+    <string name="headline_7">Fecha límite de traspasos NFL: Grandes movimientos impactan la carrera a playoffs</string>
+    <string name="headline_8">NBA: Estrella emergente rompe récord de puntuación</string>
+    <string name="headline_9">Premier League: La lucha por el título se intensifica con resultados inesperados</string>
+    <string name="headline_10">Juegos Olímpicos: Nuevos deportes añadidos para 2028</string>
+
+    <!-- League Buttons -->
+    <string name="league_button_1">NFL</string>
+    <string name="league_button_2">NBA</string>
+    <string name="league_button_3">MLB</string>
+    <string name="league_button_4">NHL</string>
+    <string name="league_button_5">Fútbol</string>
+    <string name="league_button_6">F1</string>
+    <string name="league_button_7">Tenis</string>
+    <string name="league_button_8">Golf</string>
+    <string name="league_button_9">UFC</string>
 </resources> 

@@ -12,7 +12,7 @@
     <string name="news">新闻</string>
     <string name="settings">设置</string>
     <string name="sign_in_button">登录</string>
-    <string name="additional_leagues">更多联赛！</string>
+    <string name="additional_leagues">收藏的球队/联赛！</string>
     <string name="live_score">重大赛事！实时比分</string>
     <string name="menu_transform">转换</string>
     <string name="menu_reflow">重排</string>
@@ -73,4 +73,17 @@
     <string name="title_home">主页</string>
     <string name="email">邮箱</string>
     <string name="favorite_teams_leagues">收藏的球队/联赛</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">联赛</string>
+    <string name="top_headlines_header">头条新闻</string>
+    <string name="headline_1">曼联最后时刻戏剧性获胜</string>
+    <string name="headline_2">湖人在赛季揭幕战中统治勇士</string>
+    <string name="headline_3">费德勒宣布新网球发展计划</string>
+    <string name="headline_4">MLB季后赛：分区系列赛意外爆冷</string>
+    <string name="headline_5">F1：排位赛创造新赛道纪录</string>
+    <string name="headline_6">欧冠联赛：意外结果震动小组排名</string>
+    <string name="headline_7">NFL交易截止：重大交易影响季后赛争夺</string>
+    <string name="headline_8">NBA：新星打破得分纪录</string>
+    <string name="headline_9">英超：意外结果使冠军争夺白热化</string>
+    <string name="headline_10">奥运会：2028年增设新项目</string>
 </resources> 

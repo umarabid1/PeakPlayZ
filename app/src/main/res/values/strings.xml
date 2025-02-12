@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">PeakPlays</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -116,4 +116,29 @@
     <string name="country_hint">Select your country</string>
 
     <string name="favorite_teams_leagues">Favorite Teams/Leagues</string>
+    
+    <!-- Home page headers -->
+    <string name="leagues_header">Leagues</string>
+    <string name="top_headlines_header">Top Headlines</string>
+    <string name="headline_1">Manchester United secures dramatic win in final minutes</string>
+    <string name="headline_2">Lakers dominate in season opener against Warriors</string>
+    <string name="headline_3">Roger Federer announces new tennis development program</string>
+    <string name="headline_4">MLB playoffs: Unexpected upset in division series</string>
+    <string name="headline_5">Formula 1: New track records set in qualifying</string>
+    <string name="headline_6">Champions League: Surprise results shake up group standings</string>
+    <string name="headline_7">NFL trade deadline: Major moves shake up playoff race</string>
+    <string name="headline_8">NBA: Rising star breaks scoring record</string>
+    <string name="headline_9">Premier League: Title race heats up with unexpected results</string>
+    <string name="headline_10">Olympics: New sports added for 2028 games</string>
+
+    <!-- League Buttons -->
+    <string name="league_button_1">NFL</string>
+    <string name="league_button_2">NBA</string>
+    <string name="league_button_3">MLB</string>
+    <string name="league_button_4">NHL</string>
+    <string name="league_button_5">Soccer</string>
+    <string name="league_button_6">F1</string>
+    <string name="league_button_7">Tennis</string>
+    <string name="league_button_8">Golf</string>
+    <string name="league_button_9">UFC</string>
 </resources>

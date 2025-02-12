@@ -12,7 +12,7 @@
     <string name="news">뉴스</string>
     <string name="settings">설정</string>
     <string name="sign_in_button">로그인</string>
-    <string name="additional_leagues">추가 리그!</string>
+    <string name="additional_leagues">즐겨찾는 팀/리그!</string>
     <string name="live_score">빅 이벤트! 실시간 스코어</string>
     <string name="menu_transform">변환</string>
     <string name="menu_reflow">재배치</string>
@@ -73,4 +73,17 @@
     <string name="country_hint">국가를 선택하세요</string>
     <string name="title_home">홈</string>
     <string name="favorite_teams_leagues">즐겨찾는 팀/리그</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">리그</string>
+    <string name="top_headlines_header">주요 뉴스</string>
+    <string name="headline_1">맨체스터 유나이티드, 종료 직전 극적인 승리</string>
+    <string name="headline_2">레이커스, 시즌 개막전에서 워리어스 압도</string>
+    <string name="headline_3">로저 페더러, 새로운 테니스 육성 프로그램 발표</string>
+    <string name="headline_4">MLB 플레이오프: 디비전 시리즈에서 예상 밖의 이변</string>
+    <string name="headline_5">F1: 예선에서 새로운 트랙 기록 수립</string>
+    <string name="headline_6">챔피언스 리그: 충격적인 결과로 조별 순위 요동</string>
+    <string name="headline_7">NFL 이적 마감: 대형 이적으로 플레이오프 경쟁 변화</string>
+    <string name="headline_8">NBA: 떠오르는 스타, 득점 기록 경신</string>
+    <string name="headline_9">프리미어 리그: 예상 밖 결과로 우승 경쟁 치열</string>
+    <string name="headline_10">올림픽: 2028년 대회에 새로운 종목 추가</string>
 </resources> 

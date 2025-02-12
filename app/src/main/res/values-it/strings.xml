@@ -12,7 +12,7 @@
     <string name="news">Notizie</string>
     <string name="settings">Impostazioni</string>
     <string name="sign_in_button">Accedi</string>
-    <string name="additional_leagues">Leghe Aggiuntive!</string>
+    <string name="additional_leagues">Squadre/Leghe Preferite!</string>
     <string name="live_score">Grande Evento! Punteggio Live</string>
     <string name="menu_transform">Trasforma</string>
     <string name="menu_reflow">Ridisponi</string>
@@ -76,4 +76,17 @@
     <string name="country_hint">Seleziona il tuo paese</string>
     <string name="title_home">Home</string>
     <string name="favorite_teams_leagues">Squadre/Leghe Preferite</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">Leghe</string>
+    <string name="top_headlines_header">Principali Notizie</string>
+    <string name="headline_1">Il Manchester United conquista una vittoria drammatica negli ultimi minuti</string>
+    <string name="headline_2">I Lakers dominano all\'esordio stagionale contro i Warriors</string>
+    <string name="headline_3">Roger Federer annuncia nuovo programma di sviluppo del tennis</string>
+    <string name="headline_4">Playoff MLB: Sorpresa inaspettata nella serie divisionale</string>
+    <string name="headline_5">Formula 1: Stabiliti nuovi record in qualifica</string>
+    <string name="headline_6">Champions League: Risultati sorprendenti scuotono la classifica del girone</string>
+    <string name="headline_7">Scadenza mercato NFL: Grandi movimenti influenzano la corsa ai playoff</string>
+    <string name="headline_8">NBA: Stella nascente infrange il record di punti</string>
+    <string name="headline_9">Premier League: Lotta per il titolo si intensifica con risultati inaspettati</string>
+    <string name="headline_10">Olimpiadi: Nuovi sport aggiunti per il 2028</string>
 </resources> 

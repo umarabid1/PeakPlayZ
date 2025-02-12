@@ -12,7 +12,7 @@
     <string name="news">ニュース</string>
     <string name="settings">設定</string>
     <string name="sign_in_button">ログイン</string>
-    <string name="additional_leagues">追加リーグ！</string>
+    <string name="additional_leagues">お気に入りのチーム/リーグ！</string>
     <string name="live_score">ビッグイベント！ライブスコア</string>
     <string name="menu_transform">変換</string>
     <string name="menu_reflow">リフロー</string>
@@ -75,4 +75,17 @@
     <string name="country_hint">国を選択</string>
     <string name="title_home">ホーム</string>
     <string name="favorite_teams_leagues">お気に入りのチーム/リーグ</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">リーグ</string>
+    <string name="top_headlines_header">トップニュース</string>
+    <string name="headline_1">マンチェスター・ユナイテッド、終了間際に劇的勝利</string>
+    <string name="headline_2">レイカーズ、開幕戦でウォリアーズを圧倒</string>
+    <string name="headline_3">ロジャー・フェデラー、新テニス育成プログラムを発表</string>
+    <string name="headline_4">MLBプレーオフ：地区シリーズで予想外の波乱</string>
+    <string name="headline_5">F1：予選で新たなコースレコードを樹立</string>
+    <string name="headline_6">チャンピオンズリーグ：驚きの結果でグループ順位が大きく変動</string>
+    <string name="headline_7">NFL移籍期限：大型移籍でプレーオフレースに影響</string>
+    <string name="headline_8">NBA：新星が得点記録を更新</string>
+    <string name="headline_9">プレミアリーグ：予想外の結果でタイトルレースが白熱</string>
+    <string name="headline_10">オリンピック：2028年大会に新競技追加</string>
 </resources> 

@@ -18,7 +18,7 @@
     <string name="notifications">Benachrichtigungen</string>
     <string name="enable_notifications">Benachrichtigungen aktivieren</string>
     <string name="sign_in_button">Anmelden</string>
-    <string name="additional_leagues">Zusätzliche Ligen!</string>
+    <string name="additional_leagues">Lieblingsteams/Ligen!</string>
     <string name="live_score">Großes Event! Live-Score</string>
     <string name="menu_transform">Transformieren</string>
     <string name="menu_reflow">Neuanordnen</string>
@@ -73,4 +73,17 @@
     <string name="country_hint">Wählen Sie Ihr Land aus</string>
     <string name="title_home">Startseite</string>
     <string name="favorite_teams_leagues">Lieblingsteams/Ligen</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">Ligen</string>
+    <string name="top_headlines_header">Top-Schlagzeilen</string>
+    <string name="headline_1">Manchester United sichert sich dramatischen Sieg in letzter Minute</string>
+    <string name="headline_2">Lakers dominieren Saisonauftakt gegen Warriors</string>
+    <string name="headline_3">Roger Federer kündigt neues Tennis-Entwicklungsprogramm an</string>
+    <string name="headline_4">MLB-Playoffs: Unerwartete Überraschung in der Divisional Series</string>
+    <string name="headline_5">Formel 1: Neue Streckenrekorde im Qualifying aufgestellt</string>
+    <string name="headline_6">Champions League: Überraschende Ergebnisse verändern Gruppenstand</string>
+    <string name="headline_7">NFL Trade Deadline: Große Wechsel beeinflussen Playoff-Rennen</string>
+    <string name="headline_8">NBA: Aufgehender Stern bricht Scoring-Rekord</string>
+    <string name="headline_9">Premier League: Titelrennen spitzt sich mit unerwarteten Ergebnissen zu</string>
+    <string name="headline_10">Olympische Spiele: Neue Sportarten für 2028 hinzugefügt</string>
 </resources> 

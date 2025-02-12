@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Leagues"
+            android:text="@string/leagues_header"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -45,7 +45,18 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_nfl"
+                app:iconGravity="textStart"
+                app:iconSize="115dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
                 app:layout_gravity="fill"
                 app:layout_columnWeight="1"
                 app:layout_rowWeight="1"/>
@@ -56,7 +67,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="2"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_nba"
+                app:iconGravity="textStart"
+                app:iconSize="100dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button3"
@@ -64,7 +89,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="3"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_mlb"
+                app:iconGravity="textStart"
+                app:iconSize="70dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
         </TableRow>
 
         <TableRow android:layout_width="match_parent">
@@ -74,7 +113,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="4"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_nhl"
+                app:iconGravity="textStart"
+                app:iconSize="100dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button5"
@@ -82,7 +135,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="5"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_ufc"
+                app:iconGravity="textStart"
+                app:iconSize="115dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button6"
@@ -90,7 +157,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="6"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_epl"
+                app:iconGravity="textStart"
+                app:iconSize="100dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
         </TableRow>
 
         <TableRow android:layout_width="match_parent">
@@ -100,7 +181,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="7"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_bl"
+                app:iconGravity="textStart"
+                app:iconSize="65dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button8"
@@ -108,7 +203,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="8"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_seriea"
+                app:iconGravity="textStart"
+                app:iconSize="80dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button9"
@@ -116,7 +225,21 @@
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_margin="8dp"
-                android:text="9"/>
+                android:clickable="true"
+                android:focusable="true"
+                app:icon="@drawable/ic_mls"
+                app:iconGravity="textStart"
+                app:iconSize="80dp"
+                app:iconTint="@null"
+                app:iconPadding="0dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:layout_gravity="fill"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"/>
         </TableRow>
 
     </TableLayout>
@@ -138,7 +261,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Top Headlines"
+            android:text="@string/top_headlines_header"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -157,7 +280,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 1: Eagles win Super Bowl in dramatic fashion"
+            android:text="▶ Lakers defeat Warriors 121-115 in overtime thriller"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -165,7 +288,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 2: Lakers secure playoff spot with crucial victory"
+            android:text="▶ Manchester City tops Premier League after 3-0 win"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -173,7 +296,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 3: Manchester United signs new star striker"
+            android:text="▶ Chiefs secure playoff spot with victory over Raiders"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -181,7 +304,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 4: Tennis star advances to Wimbledon finals"
+            android:text="▶ Bayern Munich advances in Champions League"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -189,7 +312,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 5: MLB announces major rule changes for next season"
+            android:text="▶ Yankees sign star pitcher to record-breaking deal"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -197,7 +320,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 6: NHL team makes historic comeback in playoffs"
+            android:text="▶ Connor McDavid scores hat-trick in Oilers win"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -205,7 +328,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 7: Formula 1 champion sets new track record"
+            android:text="▶ UFC 300 main event announced for April"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -213,7 +336,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 8: Golf prodigy wins first major tournament"
+            android:text="▶ Inter Milan extends unbeaten streak to 15 games"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -221,7 +344,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 9: Olympic committee announces new event categories"
+            android:text="▶ Dortmund signs promising young striker"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>
@@ -229,7 +352,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ Headline 10: Cricket world cup final sets viewership record"
+            android:text="▶ MLS announces expansion team for 2026"
             android:padding="4dp"
             android:textSize="14sp"
             android:textColor="@color/white"/>

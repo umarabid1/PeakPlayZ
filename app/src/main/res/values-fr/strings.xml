@@ -37,7 +37,7 @@
     <string name="create_account_prompt">Vous n\'avez pas de compte ?\nCréez-en un ici</string>
     <string name="sign_in_button">Se\nConnecter</string>
     <!-- Other translations... -->
-    <string name="additional_leagues">Ligues Supplémentaires !</string>
+    <string name="additional_leagues">Équipes/Ligues Favorites !</string>
     <string name="live_score">Grand Événement ! Score en Direct</string>
     <string name="changing_language">Changement de langue…</string>
     <string name="enable_notifications_message">Pour recevoir des notifications, vous devez les activer dans les paramètres système.</string>
@@ -78,4 +78,17 @@
     <!-- French -->
     <string name="title_home">Accueil</string>
     <string name="favorite_teams_leagues">Équipes/Ligues Favorites</string>
+    <!-- Home page headers -->
+    <string name="leagues_header">Ligues</string>
+    <string name="top_headlines_header">Gros Titres</string>
+    <string name="headline_1">Manchester United s\'impose de façon spectaculaire dans les dernières minutes</string>
+    <string name="headline_2">Les Lakers dominent les Warriors lors du match d\'ouverture</string>
+    <string name="headline_3">Roger Federer annonce un nouveau programme de développement du tennis</string>
+    <string name="headline_4">Playoffs MLB : Surprise inattendue en série de division</string>
+    <string name="headline_5">Formule 1 : Nouveaux records de piste établis en qualification</string>
+    <string name="headline_6">Ligue des Champions : Des résultats surprenants bouleversent le classement</string>
+    <string name="headline_7">Date limite des transferts NFL : Des mouvements majeurs impactent la course aux playoffs</string>
+    <string name="headline_8">NBA : Une étoile montante bat le record de points</string>
+    <string name="headline_9">Premier League : La course au titre s\'intensifie avec des résultats inattendus</string>
+    <string name="headline_10">Jeux Olympiques : Nouveaux sports ajoutés pour 2028</string>
 </resources> 
