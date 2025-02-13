@@ -73,6 +73,7 @@ class SettingsFragment : Fragment() {
     private fun setupLanguageSelector() {
         val languages = resources.getStringArray(R.array.languages)
         val languageCodes = resources.getStringArray(R.array.language_codes)
+        
         val adapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, languages)
         binding.languageSelector.setAdapter(adapter)
 
@@ -87,10 +88,19 @@ class SettingsFragment : Fragment() {
         binding.languageSelector.setOnItemClickListener { _, _, position, _ ->
             val selectedLanguageCode = languageCodes[position]
             if (selectedLanguageCode != savedLanguageCode) {
+                // Save the selected language
+                prefs.edit().putString(PREF_LANGUAGE, selectedLanguageCode).apply()
                 LocaleHelper.saveLanguageCode(requireContext(), selectedLanguageCode)
-                binding.root.post {
-                    updateAppLanguage(selectedLanguageCode)
-                }
+                
+                // Show language change message and restart
+                Toast.makeText(context, getString(R.string.changing_language), Toast.LENGTH_SHORT).show()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    requireActivity().packageManager.getLaunchIntentForPackage(requireActivity().packageName)?.let { intent ->
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                        requireActivity().finish()
+                    }
+                }, 500)
             }
             binding.languageSelector.dismissDropDown()
         }

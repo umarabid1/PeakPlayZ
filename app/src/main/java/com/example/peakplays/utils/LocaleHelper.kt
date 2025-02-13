@@ -17,68 +17,62 @@ object LocaleHelper {
         val language = prefs.getString(PREF_LANGUAGE, null) 
             ?: context.resources.configuration.locales[0].language
 
-        Log.d(TAG, "Setting locale - Saved preference: ${prefs.getString(PREF_LANGUAGE, null)}")
-        Log.d(TAG, "Setting locale - Current language: $language")
-        Log.d(TAG, "Setting locale - Current locale: ${context.resources.configuration.locales[0]}")
+        Log.d(TAG, "Setting locale - Requested language: $language")
 
-        val locale = when (language) {
+        val locale = createLocale(language)
+        Locale.setDefault(locale)
+
+        val config = Configuration(context.resources.configuration)
+        config.setLocale(locale)
+        
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            config.setLocales(localeList)
+        }
+
+        val newContext = context.createConfigurationContext(config)
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+        return newContext
+    }
+
+    private fun createLocale(language: String): Locale {
+        return when (language) {
             "zh" -> Locale.SIMPLIFIED_CHINESE
             "ja" -> Locale.JAPAN
             "ko" -> Locale.KOREA
             else -> Locale(language)
         }
-
-        Log.d(TAG, "Setting locale - New locale: $locale")
-        Locale.setDefault(locale)
-
-        val config = Configuration(context.resources.configuration)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            val localeList = LocaleList(locale)
-            LocaleList.setDefault(localeList)
-            config.setLocales(localeList)
-        } else {
-            @Suppress("DEPRECATION")
-            config.locale = locale
-        }
-
-        val newContext = context.createConfigurationContext(config)
-        Log.d(TAG, "Final context locale: ${newContext.resources.configuration.locales[0]}")
-        return newContext
-    }
-
-    fun getLanguageCode(context: Context): String {
-        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val saved = prefs.getString(PREF_LANGUAGE, null)
-        val default = context.resources.configuration.locales[0].language
-        Log.d(TAG, "Getting language code - Saved: $saved, Default: $default")
-        return saved ?: default
     }
 
     fun saveLanguageCode(context: Context, languageCode: String) {
         Log.d(TAG, "Saving language code: $languageCode")
-        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        prefs.edit()
+        
+        // Save the preference
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .edit()
             .putString(PREF_LANGUAGE, languageCode)
-            .commit()  // Use commit() instead of apply() to ensure immediate write
-        
-        // Verify the save
-        val savedValue = prefs.getString(PREF_LANGUAGE, null)
-        Log.d(TAG, "Verified saved language code: $savedValue")
+            .apply()  // Changed from commit() to apply() for better performance
 
-        val locale = Locale(languageCode)
+        // Update the configuration immediately
+        val locale = createLocale(languageCode)
         Locale.setDefault(locale)
-        
+
         val config = Configuration(context.resources.configuration)
+        config.setLocale(locale)
+        
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             val localeList = LocaleList(locale)
             LocaleList.setDefault(localeList)
             config.setLocales(localeList)
-        } else {
-            @Suppress("DEPRECATION")
-            config.locale = locale
         }
-        
+
         context.resources.updateConfiguration(config, context.resources.displayMetrics)
-        Log.d(TAG, "After save - Current locale: ${context.resources.configuration.locales[0]}")
+    }
+
+    fun getLanguageCode(context: Context): String {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getString(PREF_LANGUAGE, null) 
+            ?: context.resources.configuration.locales[0].language
     }
 } 
