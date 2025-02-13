@@ -71,12 +71,18 @@ class SignInActivity : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     finish()
                 } else {
-                    // If sign in fails, display a message to the user.
-                    Toast.makeText(
-                        baseContext,
-                        "Authentication failed: ${task.exception?.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    // If sign in fails, display a specific message based on the error
+                    val errorMessage = when {
+                        task.exception?.message?.contains("password is invalid") == true ||
+                        task.exception?.message?.contains("no user record") == true ->
+                            "Incorrect email or password"
+                        task.exception?.message?.contains("badly formatted") == true ->
+                            "Please enter a valid email address"
+                        task.exception?.message?.contains("too many failed attempts") == true ->
+                            "Too many failed attempts. Please try again later"
+                        else -> "Invalid Username or Password"
+                    }
+                    Toast.makeText(baseContext, errorMessage, Toast.LENGTH_SHORT).show()
                 }
             }
     }
