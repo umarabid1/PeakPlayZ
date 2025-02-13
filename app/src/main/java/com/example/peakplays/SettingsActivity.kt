@@ -2,11 +2,11 @@ package com.example.peakplays
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivitySettingsBinding
 import com.example.peakplays.ui.settings.SettingsFragment
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : BaseActivity() {
     private lateinit var binding: ActivitySettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class SettingsActivity : AppCompatActivity() {
 
         // Set up back button
         binding.backButton.setOnClickListener {
-            onBackPressed()
+            finish()
         }
 
         // Hide system UI navigation

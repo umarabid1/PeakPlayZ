@@ -85,9 +85,10 @@
 
     <!-- Password Reset Page -->
     <string name="reset_password_title">Reset Password</string>
+    <string name="reset_password">Reset Password</string>
     <string name="reset_password_instruction">Enter your email address to reset your password</string>
     <string name="email_address">Email Address:</string>
-    <string name="email_hint">Enter your email</string>
+    <string name="email_hint">Enter your email address</string>
     <string name="reset_password_button">Reset Password</string>
     <string name="back_to_sign_in">Back to Sign In</string>
     <string name="reset_email_sent">Password reset email has been sent</string>

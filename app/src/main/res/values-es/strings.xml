@@ -47,6 +47,7 @@
     <string name="disable_notifications">Desactivar notificaciones</string>
     <!-- Password Reset Page -->
     <string name="reset_password_title">Restablecer Contraseña</string>
+    <string name="reset_password">Restablecer Contraseña</string>
     <string name="reset_password_instruction">Ingrese su correo electrónico para restablecer su contraseña</string>
     <string name="email_address">Correo Electrónico:</string>
     <string name="email_hint">Ingrese su correo electrónico</string>
@@ -104,4 +105,7 @@
     <string name="league_button_7">Tenis</string>
     <string name="league_button_8">Golf</string>
     <string name="league_button_9">UFC</string>
+
+    <string name="back_button">Atrás</string>
+    <string name="sign_out">Cerrar Sesión</string>
 </resources> 

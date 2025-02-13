@@ -24,6 +24,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="8dp"
                 android:src="@drawable/ic_back"
+                android:contentDescription="@string/back_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -78,6 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:textColor="@color/white"
                     android:hint="@string/first_name_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -103,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:textColor="@color/white"
                     android:hint="@string/last_name_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -128,6 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
                     android:hint="@string/email_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -154,6 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
+                    android:textColor="@color/white"
                     android:hint="@string/password_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -179,6 +184,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
+                    android:textColor="@color/white"
                     android:hint="@string/phone_hint"/>
 
             </com.google.android.material.textfield.TextInputLayout>

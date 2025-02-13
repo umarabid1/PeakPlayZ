@@ -3,13 +3,13 @@ package com.example.peakplays
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import com.example.peakplays.base.BaseActivity
 import com.example.peakplays.databinding.ActivityPasswordResetBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class PasswordResetActivity : AppCompatActivity() {
+class PasswordResetActivity : BaseActivity() {
     private lateinit var binding: ActivityPasswordResetBinding
     private lateinit var auth: FirebaseAuth
 
@@ -32,7 +32,7 @@ class PasswordResetActivity : AppCompatActivity() {
 
     private fun setupClickListeners() {
         binding.resetPasswordButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString()
+            val email = binding.emailInput.text.toString()
 
             if (email.isNotEmpty()) {
                 resetPassword(email)
