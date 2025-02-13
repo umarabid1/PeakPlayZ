@@ -17,16 +17,24 @@ import com.example.peakplays.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.SimpleDateFormat
 import java.util.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import android.widget.Toast
 
 class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private var isLeaguesExpanded = false
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+
         // Hide only system UI navigation, keep app's bottom navigation visible
         @Suppress("DEPRECATION")
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
@@ -85,7 +93,15 @@ class HomeActivity : BaseActivity() {
         }
 
         binding.signInButton?.setOnClickListener {
-            startActivity(Intent(this, SignInActivity::class.java))
+            if (auth.currentUser != null) {
+                // User is signed in, so sign them out
+                auth.signOut()
+                Toast.makeText(this, "Signed out successfully", Toast.LENGTH_SHORT).show()
+                updateSignInButton()
+            } else {
+                // User is not signed in, go to sign in screen
+                startActivity(Intent(this, SignInActivity::class.java))
+            }
         }
     }
 
@@ -110,13 +126,17 @@ class HomeActivity : BaseActivity() {
         })
     }
 
-    private fun updateUIText() {
-        // Update existing UI text
-        binding.signInButton?.text = getString(R.string.sign_in_button)
+    private fun updateSignInButton() {
+        // Update button text based on auth state
+        binding.signInButton?.text = if (auth.currentUser != null) {
+            getString(R.string.sign_out)
+        } else {
+            getString(R.string.sign_in)
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        updateUIText()
+        updateSignInButton()
     }
 }

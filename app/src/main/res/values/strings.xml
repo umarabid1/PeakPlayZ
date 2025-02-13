@@ -144,4 +144,6 @@
 
     <string name="set_password">Set Password:</string>
     <string name="set_password_hint">Create your password</string>
+
+    <string name="sign_out">Sign Out</string>
 </resources>
