@@ -21,4 +21,9 @@
         <item name="rippleColor">@color/blue_button</item>
         <item name="android:stateListAnimator">@null</item>
     </style>
+
+    <style name="Theme.PeakPlayz.NoActionBar" parent="Theme.PeakPlayz">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources> 
