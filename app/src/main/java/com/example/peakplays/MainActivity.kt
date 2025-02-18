@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.MenuItem
 import android.view.View
 import com.example.peakplays.base.BaseActivity
 
@@ -23,5 +24,24 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }, 2000)
+    }
+
+    private fun navigateToNews() {
+        val intent = Intent(this, NewsActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onNewsButtonClick(view: View) {
+        navigateToNews()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_news -> {
+                navigateToNews()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
