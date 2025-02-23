@@ -41,23 +41,13 @@ class RostersFragment : Fragment() {
 
     private suspend fun fetchTeams(league: League): List<Team> {
         return try {
-            when (league) {
-                League.NFL, League.NBA, League.MLB, League.NHL, League.MLS -> {
-                    // Use dummy data for non-football leagues for now
-                    getDummyTeams(league)
-                }
-                League.EPL, League.BUNDESLIGA, League.SERIE_A -> {
-                    // Use API for football leagues
-                    val response = ApiClient.sportsApi.getTeams(league.apiId)
-                    response.response.map { teamResponse ->
-                        Team(
-                            name = teamResponse.team.name,
-                            logoUrl = teamResponse.team.logo,
-                            league = league
-                        )
-                    }
-                }
-                League.UFC -> getDummyTeams(league) // Use dummy data for UFC
+            val response = ApiClient.sportsApi.getTeamsByLeague(league.apiId)
+            response.teams.map { teamData ->
+                Team(
+                    name = teamData.strTeam,
+                    logoUrl = teamData.strBadge,
+                    league = league
+                )
             }
         } catch (e: Exception) {
             Log.e("RostersFragment", "Error fetching teams for ${league.name}", e)
@@ -87,9 +77,9 @@ class RostersFragment : Fragment() {
                     }
                     
                     // Setup click listener for expansion
-                    var isExpanded = false // Track expansion state
+                    var isExpanded = false
                     headerContainer.setOnClickListener {
-                        isExpanded = !isExpanded // Toggle state
+                        isExpanded = !isExpanded
                         teamsRecyclerView.visibility = if (isExpanded) View.VISIBLE else View.GONE
                         expandIcon.animate()
                             .rotation(if (isExpanded) 180f else 0f)
@@ -97,19 +87,15 @@ class RostersFragment : Fragment() {
                             .start()
                         
                         if (isExpanded && teamsRecyclerView.adapter == null) {
-                            // Show dummy teams immediately while fetching from API
-                            val dummyTeams = getDummyTeams(league)
-                            teamsRecyclerView.adapter = TeamAdapter(dummyTeams) { team ->
-                                parentFragmentManager.beginTransaction()
-                                    .replace(R.id.fragment_container, TeamRosterFragment.newInstance(team))
-                                    .addToBackStack(null)
-                                    .commit()
-                            }
+                            // Show loading state
+                            progressBar.visibility = View.VISIBLE
                             
-                            // Try to fetch real teams in background
+                            // Fetch teams from API
                             viewLifecycleOwner.lifecycleScope.launch {
                                 try {
                                     val teams = fetchTeams(league)
+                                    progressBar.visibility = View.GONE
+                                    
                                     if (teams.isNotEmpty()) {
                                         teamsRecyclerView.adapter = TeamAdapter(teams) { team ->
                                             parentFragmentManager.beginTransaction()
@@ -117,9 +103,14 @@ class RostersFragment : Fragment() {
                                                 .addToBackStack(null)
                                                 .commit()
                                         }
+                                    } else {
+                                        // Show error message if no teams found
+                                        Toast.makeText(context, "No teams found", Toast.LENGTH_SHORT).show()
                                     }
                                 } catch (e: Exception) {
+                                    progressBar.visibility = View.GONE
                                     Log.e("RostersFragment", "Error fetching teams", e)
+                                    Toast.makeText(context, "Error loading teams", Toast.LENGTH_SHORT).show()
                                 }
                             }
                         }
@@ -359,19 +350,27 @@ class RostersFragment : Fragment() {
                 Team("Torino", "https://example.com/torino.png", league),
                 Team("Udinese", "https://example.com/udinese.png", league)
             )
-            League.UFC -> listOf(
-                Team("Flyweight Division", "https://example.com/flyweight.png", league),
-                Team("Bantamweight Division", "https://example.com/bantamweight.png", league),
-                Team("Featherweight Division", "https://example.com/featherweight.png", league),
-                Team("Lightweight Division", "https://example.com/lightweight.png", league),
-                Team("Welterweight Division", "https://example.com/welterweight.png", league),
-                Team("Middleweight Division", "https://example.com/middleweight.png", league),
-                Team("Light Heavyweight Division", "https://example.com/lightheavyweight.png", league),
-                Team("Heavyweight Division", "https://example.com/heavyweight.png", league),
-                Team("Women's Strawweight Division", "https://example.com/womensstrawweight.png", league),
-                Team("Women's Flyweight Division", "https://example.com/womensflyweight.png", league),
-                Team("Women's Bantamweight Division", "https://example.com/womensbantamweight.png", league),
-                Team("Women's Featherweight Division", "https://example.com/womensfeatherweight.png", league)
+            League.LA_LIGA -> listOf(
+                Team("Real Madrid", "https://example.com/realmadrid.png", league),
+                Team("Barcelona", "https://example.com/barcelona.png", league),
+                Team("Atletico Madrid", "https://example.com/atleticomadrid.png", league),
+                Team("Real Sociedad", "https://example.com/realsociedad.png", league),
+                Team("Athletic Bilbao", "https://example.com/athleticbilbao.png", league),
+                Team("Real Betis", "https://example.com/realbetis.png", league),
+                Team("Valencia", "https://example.com/valencia.png", league),
+                Team("Villarreal", "https://example.com/villarreal.png", league),
+                Team("Sevilla", "https://example.com/sevilla.png", league),
+                Team("Osasuna", "https://example.com/osasuna.png", league),
+                Team("Getafe", "https://example.com/getafe.png", league),
+                Team("Rayo Vallecano", "https://example.com/rayovallecano.png", league),
+                Team("Celta Vigo", "https://example.com/celtavigo.png", league),
+                Team("Mallorca", "https://example.com/mallorca.png", league),
+                Team("Alaves", "https://example.com/alaves.png", league),
+                Team("Las Palmas", "https://example.com/laspalmas.png", league),
+                Team("Granada", "https://example.com/granada.png", league),
+                Team("Cadiz", "https://example.com/cadiz.png", league),
+                Team("Almeria", "https://example.com/almeria.png", league),
+                Team("Girona", "https://example.com/girona.png", league)
             )
         }
     }

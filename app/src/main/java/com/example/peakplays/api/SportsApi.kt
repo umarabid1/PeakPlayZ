@@ -1,34 +1,27 @@
 package com.example.peakplays.api
 
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface SportsApi {
-    @GET("teams")
-    suspend fun getTeams(
-        @Query("league") league: String,
-        @Query("season") season: Int = 2024
-    ): TeamsResponse
+    @GET("searchteams.php")
+    suspend fun searchTeam(@Query("t") teamName: String): TeamSearchResponse
+
+    @GET("lookup_all_teams.php")
+    suspend fun getTeamsByLeague(@Query("id") leagueId: String): TeamSearchResponse
 
     companion object {
-        // Using API-SPORTS as an example
-        const val BASE_URL = "https://v3.football.api-sports.io/"
-        // You'll need to sign up for a free API key
-        const val API_KEY = "deae9560aefb953c79444206ee9c17c7"
+        const val BASE_URL = "https://www.thesportsdb.com/api/v1/json/002930/"
     }
 }
 
-data class TeamsResponse(
-    val response: List<TeamResponse>
-)
-
-data class TeamResponse(
-    val team: TeamData
+data class TeamSearchResponse(
+    val teams: List<TeamData>
 )
 
 data class TeamData(
-    val id: Int,
-    val name: String,
-    val logo: String
+    val idTeam: String,
+    val strTeam: String,
+    val strBadge: String,
+    val strLeague: String
 ) 
