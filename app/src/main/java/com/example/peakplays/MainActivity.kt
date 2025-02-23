@@ -7,8 +7,13 @@ import android.os.Looper
 import android.view.MenuItem
 import android.view.View
 import com.example.peakplays.base.BaseActivity
+import com.example.peakplays.viewmodels.TeamsViewModel
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity() {
+    private val viewModel: TeamsViewModel by viewModels()
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
@@ -24,6 +29,8 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }, 2000)
+
+        // The ViewModel will start pre-loading teams as soon as it's initialized
     }
 
     private fun navigateToNews() {
