@@ -120,7 +120,7 @@
     
     <!-- Home page headers -->
     <string name="leagues_header">Leagues</string>
-    <string name="top_headlines_header">Top Headlines</string>
+    <string name="top_headlines_header">Live Scores</string>
     <string name="headline_1">Manchester United secures dramatic win in final minutes</string>
     <string name="headline_2">Lakers dominate in season opener against Warriors</string>
     <string name="headline_3">Roger Federer announces new tennis development program</string>

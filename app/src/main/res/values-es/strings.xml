@@ -83,7 +83,7 @@
     
     <!-- Home page headers -->
     <string name="leagues_header">Ligas</string>
-    <string name="top_headlines_header">Titulares Principales</string>
+    <string name="top_headlines_header">Resultados en Vivo</string>
     <string name="headline_1">El Manchester United logra una victoria dramática en los últimos minutos</string>
     <string name="headline_2">Los Lakers dominan a los Warriors en el partido inaugural</string>
     <string name="headline_3">Roger Federer anuncia nuevo programa de desarrollo del tenis</string>
