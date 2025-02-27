@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peakplays.adapters.TeamAdapter
@@ -25,7 +25,7 @@ class SchedulesFragment : Fragment() {
     private var _binding: FragmentSchedulesBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: TeamsViewModel by viewModels()
+    private val viewModel: TeamsViewModel by activityViewModels()
     private val leagueSections = mutableMapOf<League, LeagueSectionBinding>()
 
     override fun onCreateView(
@@ -39,9 +39,28 @@ class SchedulesFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        // Clear selected team when fragment becomes visible
+        viewModel.clearSelectedTeam()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("SchedulesFragment", "onViewCreated called")
+
+        // Observe selected team changes
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.selectedTeam.collect { selectedTeam ->
+                // When selected team changes to null, collapse all sections
+                if (selectedTeam == null) {
+                    leagueSections.values.forEach { section ->
+                        section.teamsRecyclerView.visibility = View.GONE
+                        section.expandIcon.rotation = 0f
+                    }
+                }
+            }
+        }
     }
 
     private fun setupLeagueSections() {
@@ -80,6 +99,7 @@ class SchedulesFragment : Fragment() {
                             if (!teams.isNullOrEmpty()) {
                                 progressBar.visibility = View.GONE
                                 teamsRecyclerView.adapter = TeamAdapter(teams) { team ->
+                                    viewModel.setSelectedTeam(team)
                                     findNavController().navigate(
                                         R.id.navigation_team_schedule,
                                         TeamScheduleFragment.createArguments(team)
@@ -100,6 +120,7 @@ class SchedulesFragment : Fragment() {
                         if (sectionBinding.teamsRecyclerView.visibility == View.VISIBLE) {
                             sectionBinding.progressBar.visibility = View.GONE
                             sectionBinding.teamsRecyclerView.adapter = TeamAdapter(teams) { team ->
+                                viewModel.setSelectedTeam(team)
                                 findNavController().navigate(
                                     R.id.navigation_team_schedule,
                                     TeamScheduleFragment.createArguments(team)

@@ -23,8 +23,10 @@ import com.google.firebase.ktx.Firebase
 import android.widget.Toast
 import android.util.Log
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 
-class HomeActivity : BaseActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -103,6 +105,33 @@ class HomeActivity : BaseActivity() {
             } else {
                 // User is not signed in, go to sign in screen
                 startActivity(Intent(this, SignInActivity::class.java))
+            }
+        }
+
+        // Handle bottom navigation clicks
+        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
+            // Check if we're in a team detail fragment
+            val currentFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+                ?.childFragmentManager
+                ?.fragments
+                ?.firstOrNull()
+
+            when (currentFragment) {
+                is TeamRosterFragment, is TeamScheduleFragment -> {
+                    // Navigate directly to the destination
+                    navController.navigate(menuItem.itemId, null, 
+                        androidx.navigation.NavOptions.Builder()
+                            .setPopUpTo(R.id.navigation_home, false)
+                            .setLaunchSingleTop(true)
+                            .build()
+                    )
+                    true
+                }
+                else -> {
+                    // Normal navigation
+                    navController.navigate(menuItem.itemId)
+                    true
+                }
             }
         }
     }

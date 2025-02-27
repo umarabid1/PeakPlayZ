@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.peakplays.databinding.FragmentTeamRosterBinding
@@ -32,8 +33,8 @@ class TeamRosterFragment : Fragment() {
         }
 
         binding.backButton.setOnClickListener {
-            // Navigate back
-            parentFragmentManager.popBackStack()
+            // Use navigateUp() instead of popBackStack()
+            findNavController().navigateUp()
         }
     }
 

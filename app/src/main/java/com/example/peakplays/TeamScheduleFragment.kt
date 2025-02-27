@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.peakplays.databinding.FragmentTeamScheduleBinding
 import com.example.peakplays.models.Team
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 class TeamScheduleFragment : Fragment() {
     private var _binding: FragmentTeamScheduleBinding? = null
@@ -40,9 +41,12 @@ class TeamScheduleFragment : Fragment() {
     private fun setupTeamSchedule(team: Team) {
         binding.teamNameHeader.text = team.name
         
-        // Load team logo
-        Glide.with(this)
+        // Load team logo using Glide with matching configuration
+        Glide.with(requireContext())
             .load(team.logoUrl)
+            .placeholder(R.drawable.team_logo_placeholder)
+            .error(R.drawable.team_logo_placeholder)
+            .transition(DrawableTransitionOptions.withCrossFade())
             .into(binding.teamLogo)
             
         // TODO: Add schedule-specific implementation

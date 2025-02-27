@@ -14,6 +14,9 @@ class TeamsViewModel : ViewModel() {
     private val _teamsMap = MutableStateFlow<Map<League, List<Team>>>(emptyMap())
     val teamsMap: StateFlow<Map<League, List<Team>>> = _teamsMap.asStateFlow()
 
+    private val _selectedTeam = MutableStateFlow<Team?>(null)
+    val selectedTeam: StateFlow<Team?> = _selectedTeam
+
     init {
         preloadAllTeams()
     }
@@ -88,5 +91,13 @@ class TeamsViewModel : ViewModel() {
                 // ... other La Liga teams
             )
         }
+    }
+
+    fun clearSelectedTeam() {
+        _selectedTeam.value = null
+    }
+
+    fun setSelectedTeam(team: Team) {
+        _selectedTeam.value = team
     }
 } 
