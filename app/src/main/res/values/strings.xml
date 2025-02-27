@@ -151,4 +151,7 @@
     <string name="back_button">Back</string>
 
     <string name="team_logo">Team Logo</string>
+
+    <string name="league_logo">League Logo</string>
+    <string name="league_details">League Details</string>
 </resources>

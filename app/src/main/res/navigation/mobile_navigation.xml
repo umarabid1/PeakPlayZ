@@ -33,6 +33,26 @@
         android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
     
+    <fragment
+        android:id="@+id/navigation_team_roster"
+        android:name="com.example.peakplays.TeamRosterFragment"
+        android:label="@string/rosters"
+        tools:layout="@layout/fragment_team_roster">
+        <argument
+            android:name="team"
+            app:argType="com.example.peakplays.models.Team" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/navigation_league_details"
+        android:name="com.example.peakplays.LeagueDetailsFragment"
+        android:label="@string/league_details"
+        tools:layout="@layout/fragment_league_details">
+        <argument
+            android:name="league"
+            app:argType="com.example.peakplays.models.League" />
+    </fragment>
+    
     <!-- Add your navigation destinations here -->
     
 </navigation> 

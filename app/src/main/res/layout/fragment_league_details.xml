@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:background="@color/light_galaxy_purple">
 
-    <!-- Team Header Bar -->
+    <!-- League Header Bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/team_header"
+        android:id="@+id/league_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/button_color"
@@ -29,38 +29,27 @@
             app:tint="@android:color/white" />
 
         <ImageView
-            android:id="@+id/team_logo"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:contentDescription="@string/team_logo"
+            android:id="@+id/league_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/league_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/team_name"
+            android:id="@+id/league_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/team_logo" />
+            app:layout_constraintTop_toBottomOf="@id/league_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Player List -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/players_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="8dp"
-        android:clipToPadding="false"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/team_header"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout> 

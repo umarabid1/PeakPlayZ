@@ -19,6 +19,7 @@ import com.example.peakplays.api.ApiClient
 import com.example.peakplays.viewmodels.TeamsViewModel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collect
+import androidx.navigation.fragment.findNavController
 
 class RostersFragment : Fragment() {
     private var _binding: FragmentRostersBinding? = null
@@ -79,10 +80,10 @@ class RostersFragment : Fragment() {
                             if (!teams.isNullOrEmpty()) {
                                 progressBar.visibility = View.GONE
                                 teamsRecyclerView.adapter = TeamAdapter(teams) { team ->
-                                    parentFragmentManager.beginTransaction()
-                                        .replace(R.id.fragment_container, TeamRosterFragment.newInstance(team))
-                                        .addToBackStack(null)
-                                        .commit()
+                                    findNavController().navigate(
+                                        R.id.navigation_team_roster,
+                                        TeamRosterFragment.createArguments(team)
+                                    )
                                 }
                             }
                         }
@@ -99,10 +100,10 @@ class RostersFragment : Fragment() {
                         if (sectionBinding.teamsRecyclerView.visibility == View.VISIBLE) {
                             sectionBinding.progressBar.visibility = View.GONE
                             sectionBinding.teamsRecyclerView.adapter = TeamAdapter(teams) { team ->
-                                parentFragmentManager.beginTransaction()
-                                    .replace(R.id.fragment_container, TeamRosterFragment.newInstance(team))
-                                    .addToBackStack(null)
-                                    .commit()
+                                findNavController().navigate(
+                                    R.id.navigation_team_roster,
+                                    TeamRosterFragment.createArguments(team)
+                                )
                             }
                         }
                     }
