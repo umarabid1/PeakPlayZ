@@ -53,6 +53,12 @@
             app:argType="com.example.peakplays.models.League" />
     </fragment>
     
+    <fragment
+        android:id="@+id/navigation_team_schedule"
+        android:name="com.example.peakplays.TeamScheduleFragment"
+        android:label="Team Schedule"
+        tools:layout="@layout/fragment_team_schedule" />
+    
     <!-- Add your navigation destinations here -->
     
 </navigation> 

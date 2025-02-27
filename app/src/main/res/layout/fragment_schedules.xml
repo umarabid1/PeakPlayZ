@@ -1,18 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:background="@color/light_galaxy_purple">
 
+    <!-- Schedules Bar -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/schedules_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/button_color"
+        android:elevation="4dp"
+        android:gravity="center"
         android:text="@string/schedules"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout> 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/leagues_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- League sections will be included here -->
+            <include
+                android:id="@+id/nfl_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/nba_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/mlb_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/nhl_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/mls_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/epl_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/bundesliga_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/serie_a_section"
+                layout="@layout/league_section" />
+
+            <include
+                android:id="@+id/ufc_section"
+                layout="@layout/league_section" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout> 
