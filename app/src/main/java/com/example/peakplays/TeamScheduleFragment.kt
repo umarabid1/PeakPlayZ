@@ -10,10 +10,15 @@ import com.example.peakplays.databinding.FragmentTeamScheduleBinding
 import com.example.peakplays.models.Team
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import androidx.fragment.app.activityViewModels
+import kotlinx.coroutines.launch
+import androidx.lifecycle.lifecycleScope
+import com.example.peakplays.viewmodels.FavoritesViewModel
 
 class TeamScheduleFragment : Fragment() {
     private var _binding: FragmentTeamScheduleBinding? = null
     private val binding get() = _binding!!
+    private val favoritesViewModel: FavoritesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,6 +46,21 @@ class TeamScheduleFragment : Fragment() {
     private fun setupTeamSchedule(team: Team) {
         binding.teamNameHeader.text = team.name
         
+        // Set up favorite button
+        viewLifecycleOwner.lifecycleScope.launch {
+            favoritesViewModel.favoriteTeams.collect { favorites ->
+                val isFavorite = team.name in favorites
+                binding.favoriteButton.setImageResource(
+                    if (isFavorite) R.drawable.ic_star_filled
+                    else R.drawable.ic_star_outline
+                )
+            }
+        }
+
+        binding.favoriteButton.setOnClickListener {
+            favoritesViewModel.toggleFavorite(team.name)
+        }
+
         // Load team logo using Glide with matching configuration
         Glide.with(requireContext())
             .load(team.logoUrl)
