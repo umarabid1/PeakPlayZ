@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.peakplays.databinding.FragmentTeamScheduleBinding
-import com.example.peakplays.models.Team
+import com.example.peakplays.model.Team
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import androidx.fragment.app.activityViewModels

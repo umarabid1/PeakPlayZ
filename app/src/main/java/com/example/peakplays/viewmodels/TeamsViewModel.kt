@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.peakplays.api.ApiClient
 import com.example.peakplays.models.League
-import com.example.peakplays.models.Team
+import com.example.peakplays.model.Team
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -28,6 +28,7 @@ class TeamsViewModel : ViewModel() {
                     val response = ApiClient.sportsApi.getTeamsByLeague(league.apiId)
                     val teams = response.teams.map { teamData ->
                         Team(
+                            id = teamData.idTeam,
                             name = teamData.strTeam,
                             logoUrl = teamData.strBadge,
                             league = league
@@ -46,48 +47,48 @@ class TeamsViewModel : ViewModel() {
     private fun getDummyTeams(league: League): List<Team> {
         return when (league) {
             League.NFL -> listOf(
-                Team("Buffalo Bills", "https://example.com/bills.png", league),
-                Team("Miami Dolphins", "https://example.com/dolphins.png", league),
+                Team("NFL_BUF", "Buffalo Bills", "https://example.com/bills.png", league),
+                Team("NFL_MIA", "Miami Dolphins", "https://example.com/dolphins.png", league),
                 // ... other NFL teams
             )
             League.NBA -> listOf(
-                Team("Boston Celtics", "https://example.com/celtics.png", league),
-                Team("Brooklyn Nets", "https://example.com/nets.png", league),
+                Team("NBA_BOS", "Boston Celtics", "https://example.com/celtics.png", league),
+                Team("NBA_BKN", "Brooklyn Nets", "https://example.com/nets.png", league),
                 // ... other NBA teams
             )
             League.MLB -> listOf(
-                Team("Arizona Diamondbacks", "https://example.com/diamondbacks.png", league),
-                Team("Atlanta Braves", "https://example.com/braves.png", league),
+                Team("MLB_ARI", "Arizona Diamondbacks", "https://example.com/diamondbacks.png", league),
+                Team("MLB_ATL", "Atlanta Braves", "https://example.com/braves.png", league),
                 // ... other MLB teams
             )
             League.NHL -> listOf(
-                Team("Anaheim Ducks", "https://example.com/ducks.png", league),
-                Team("Arizona Coyotes", "https://example.com/coyotes.png", league),
+                Team("NHL_ANA", "Anaheim Ducks", "https://example.com/ducks.png", league),
+                Team("NHL_ARI", "Arizona Coyotes", "https://example.com/coyotes.png", league),
                 // ... other NHL teams
             )
             League.MLS -> listOf(
-                Team("Atlanta United FC", "https://example.com/atlantaunited.png", league),
-                Team("Austin FC", "https://example.com/austin.png", league),
+                Team("MLS_ATL", "Atlanta United FC", "https://example.com/atlantaunited.png", league),
+                Team("MLS_AUS", "Austin FC", "https://example.com/austin.png", league),
                 // ... other MLS teams
             )
             League.EPL -> listOf(
-                Team("Arsenal", "https://example.com/arsenal.png", league),
-                Team("Aston Villa", "https://example.com/astonvilla.png", league),
+                Team("EPL_ARS", "Arsenal", "https://example.com/arsenal.png", league),
+                Team("EPL_AVL", "Aston Villa", "https://example.com/astonvilla.png", league),
                 // ... other EPL teams
             )
             League.BUNDESLIGA -> listOf(
-                Team("FC Bayern Munich", "https://example.com/fcbayern.png", league),
-                Team("Borussia Dortmund", "https://example.com/borussiadortmund.png", league),
+                Team("BUN_BAY", "FC Bayern Munich", "https://example.com/fcbayern.png", league),
+                Team("BUN_DOR", "Borussia Dortmund", "https://example.com/borussiadortmund.png", league),
                 // ... other Bundesliga teams
             )
             League.SERIE_A -> listOf(
-                Team("AC Milan", "https://example.com/acmilan.png", league),
-                Team("AS Roma", "https://example.com/asroma.png", league),
+                Team("SER_MIL", "AC Milan", "https://example.com/acmilan.png", league),
+                Team("SER_ROM", "AS Roma", "https://example.com/asroma.png", league),
                 // ... other Serie A teams
             )
             League.LA_LIGA -> listOf(
-                Team("Real Madrid", "https://example.com/realmadrid.png", league),
-                Team("Barcelona", "https://example.com/barcelona.png", league),
+                Team("LIG_MAD", "Real Madrid", "https://example.com/realmadrid.png", league),
+                Team("LIG_BAR", "Barcelona", "https://example.com/barcelona.png", league),
                 // ... other La Liga teams
             )
         }

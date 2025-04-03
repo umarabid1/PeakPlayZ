@@ -156,4 +156,20 @@
     <string name="league_details">League Details</string>
 
     <string name="favorite_team">Favorite Team</string>
+
+    <!-- News Section Strings -->
+    <string name="latest_sports_news">Latest Sports News</string>
+    <string name="nba_news">NBA News</string>
+    <string name="nfl_news">NFL News</string>
+    <string name="mlb_news">MLB News</string>
+    <string name="nhl_news">NHL News</string>
+    <string name="soccer_news">Soccer News</string>
+    <string name="f1_news">Formula 1 News</string>
+    <string name="sports_headlines">Sports Headlines</string>
+
+    <!-- Player related strings -->
+    <string name="player_image">Player Image</string>
+    <string name="player_details">Player Details</string>
+    <string name="player_number_format">#%s</string>
+    <string name="player_detail_separator"> • </string>
 </resources>
