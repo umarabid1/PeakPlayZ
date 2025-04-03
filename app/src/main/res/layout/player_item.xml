@@ -52,25 +52,28 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/player_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="Age: " />
+
+            <TextView
                 android:id="@+id/player_height"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:text="Height: " />
 
             <TextView
                 android:id="@+id/player_weight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/player_salary"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:text="Weight: " />
         </LinearLayout>
 
         <TextView
