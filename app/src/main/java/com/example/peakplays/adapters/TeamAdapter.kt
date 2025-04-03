@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.peakplays.R
 import com.example.peakplays.databinding.TeamItemBinding
-import com.example.peakplays.model.Team
+import com.example.peakplays.models.Team
 
 class TeamAdapter(
     private val teams: List<Team>,

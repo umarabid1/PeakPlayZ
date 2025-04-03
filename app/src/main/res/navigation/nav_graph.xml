@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_team_roster">
         <argument
             android:name="team"
-            app:argType="com.example.peakplays.model.Team" />
+            app:argType="com.example.peakplays.models.Team" />
     </fragment>
 
 </navigation> 

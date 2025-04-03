@@ -14,7 +14,7 @@ import com.example.peakplays.adapters.TeamAdapter
 import com.example.peakplays.databinding.FragmentSchedulesBinding
 import com.example.peakplays.databinding.LeagueSectionBinding
 import com.example.peakplays.models.League
-import com.example.peakplays.model.Team
+import com.example.peakplays.models.Team
 import com.example.peakplays.api.ApiClient
 import com.example.peakplays.viewmodels.TeamsViewModel
 import kotlinx.coroutines.launch

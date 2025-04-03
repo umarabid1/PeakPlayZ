@@ -7,18 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.peakplays.databinding.FragmentTeamScheduleBinding
-import com.example.peakplays.model.Team
+import com.example.peakplays.models.Team
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import androidx.fragment.app.activityViewModels
 import kotlinx.coroutines.launch
 import androidx.lifecycle.lifecycleScope
 import com.example.peakplays.viewmodels.FavoritesViewModel
+import com.example.peakplays.viewmodels.TeamViewModel
 
 class TeamScheduleFragment : Fragment() {
     private var _binding: FragmentTeamScheduleBinding? = null
     private val binding get() = _binding!!
     private val favoritesViewModel: FavoritesViewModel by activityViewModels()
+    private val teamViewModel: TeamViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

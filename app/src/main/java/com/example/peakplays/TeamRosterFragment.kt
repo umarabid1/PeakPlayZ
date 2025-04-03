@@ -14,17 +14,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.peakplays.R
-import com.example.peakplays.adapter.PlayerAdapter
+import com.example.peakplays.adapters.PlayerAdapter
 import com.example.peakplays.api.TheSportsDBService
 import com.example.peakplays.databinding.FragmentTeamRosterBinding
 import com.example.peakplays.models.League
-import com.example.peakplays.model.Team
+import com.example.peakplays.models.Team
 import com.example.peakplays.viewmodels.FavoritesViewModel
-import com.example.peakplays.viewmodel.TeamViewModel
+import com.example.peakplays.viewmodels.TeamViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.Lifecycle
 
 class TeamRosterFragment : Fragment() {
     private var _binding: FragmentTeamRosterBinding? = null
@@ -97,9 +100,13 @@ class TeamRosterFragment : Fragment() {
 
     private fun setupObservers() {
         Log.d("TeamRosterFragment", "Setting up observers")
-        teamViewModel.selectedTeam.observe(viewLifecycleOwner) { team ->
-            Log.d("TeamRosterFragment", "Team observer triggered: ${team?.name}")
-            team?.let { updateTeamHeader(it) }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                teamViewModel.selectedTeam.collect { team: Team? ->
+                    Log.d("TeamRosterFragment", "Team observer triggered: ${team?.name}")
+                    team?.let { updateTeamHeader(it) }
+                }
+            }
         }
     }
 
