@@ -74,7 +74,7 @@ class SignInActivity : BaseActivity() {
                     // If sign in fails, display a specific message based on the error
                     val errorMessage = when {
                         task.exception?.message?.contains("password is invalid") == true ||
-                        task.exception?.message?.contains("no user record") == true ->
+                                task.exception?.message?.contains("no user record") == true ->
                             "Incorrect email or password"
                         task.exception?.message?.contains("badly formatted") == true ->
                             "Please enter a valid email address"
@@ -87,5 +87,6 @@ class SignInActivity : BaseActivity() {
             }
     }
 }
+
 
 

@@ -40,15 +40,15 @@ class SettingsFragment : Fragment() {
     ): View {
         Log.e(TAG, "SettingsFragment created")
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        
+
         // Load saved preference
         val prefs = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         val allPrefs = prefs.all // Get all preferences for debugging
         Log.d(TAG, "onCreateView - All preferences: $allPrefs")
-        
+
         val isEnabled = prefs.getBoolean(PREF_NOTIFICATIONS, false)
         Log.d(TAG, "onCreateView - Loading notification preference: $isEnabled")
-        
+
         binding.notificationsSwitch.isChecked = isEnabled
 
         binding.notificationsSwitch.setOnCheckedChangeListener { _, isChecked ->
@@ -73,7 +73,7 @@ class SettingsFragment : Fragment() {
     private fun setupLanguageSelector() {
         val languages = resources.getStringArray(R.array.languages)
         val languageCodes = resources.getStringArray(R.array.language_codes)
-        
+
         val adapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, languages)
         binding.languageSelector.setAdapter(adapter)
 
@@ -91,7 +91,7 @@ class SettingsFragment : Fragment() {
                 // Save the selected language
                 prefs.edit().putString(PREF_LANGUAGE, selectedLanguageCode).apply()
                 LocaleHelper.saveLanguageCode(requireContext(), selectedLanguageCode)
-                
+
                 // Show language change message and restart
                 Toast.makeText(context, getString(R.string.changing_language), Toast.LENGTH_SHORT).show()
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -139,7 +139,7 @@ class SettingsFragment : Fragment() {
             val editor = prefs.edit()
             editor.putBoolean(PREF_NOTIFICATIONS, enabled)
             val success = editor.commit()
-            
+
             // Verify the save worked by reading it back
             val savedValue = prefs.getBoolean(PREF_NOTIFICATIONS, !enabled) // Use opposite as default to ensure we read the saved value
             Log.d(TAG, "Save completed - success=$success, verified value=$savedValue")
@@ -154,7 +154,7 @@ class SettingsFragment : Fragment() {
             val prefs = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             val allPrefs = prefs.all // Get all preferences for debugging
             Log.d(TAG, "onResume - All preferences: $allPrefs")
-            
+
             val isEnabled = prefs.getBoolean(PREF_NOTIFICATIONS, false)
             Log.d(TAG, "onResume - Loading notification preference: $isEnabled")
             binding.notificationsSwitch.isChecked = isEnabled

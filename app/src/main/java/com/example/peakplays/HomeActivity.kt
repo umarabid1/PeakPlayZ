@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         // Initialize Firebase Auth
         auth = Firebase.auth
 
@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setupWithNavController(navController)
-        
+
         // Configure bottom navigation for different screen sizes
         if (resources.configuration.screenWidthDp >= 1240) {
             bottomNavigation.layoutParams = bottomNavigation.layoutParams.apply {
@@ -119,7 +119,7 @@ class HomeActivity : AppCompatActivity() {
             when (currentFragment) {
                 is TeamRosterFragment, is TeamScheduleFragment -> {
                     // Navigate directly to the destination
-                    navController.navigate(menuItem.itemId, null, 
+                    navController.navigate(menuItem.itemId, null,
                         androidx.navigation.NavOptions.Builder()
                             .setPopUpTo(R.id.navigation_home, false)
                             .setLaunchSingleTop(true)

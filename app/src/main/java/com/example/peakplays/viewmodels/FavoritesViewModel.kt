@@ -25,7 +25,7 @@ class FavoritesViewModel(application: Application) : AndroidViewModel(applicatio
             currentFavorites.add(teamId)
         }
         _favoriteTeams.value = currentFavorites
-        
+
         // Save to SharedPreferences
         sharedPrefs.edit().putStringSet("favorite_teams", currentFavorites).apply()
     }

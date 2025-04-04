@@ -24,7 +24,7 @@ class LeagueDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         arguments?.getParcelable<League>("league")?.let { league ->
             setupLeagueDetails(league)
         }
@@ -36,7 +36,7 @@ class LeagueDetailsFragment : Fragment() {
 
     private fun setupLeagueDetails(league: League) {
         binding.leagueName.text = league.displayName
-        
+
         val logoResId = when (league) {
             League.NFL -> R.drawable.ic_nfl
             League.NBA -> R.drawable.ic_nba

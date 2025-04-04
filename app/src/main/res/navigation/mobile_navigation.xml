@@ -4,35 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/navigation_home">
-    
+
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.peakplays.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
-    
+
     <fragment
         android:id="@+id/navigation_news"
         android:name="com.example.peakplays.NewsFragment"
         android:label="@string/news"
         tools:layout="@layout/fragment_news" />
-    
+
     <fragment
         android:id="@+id/navigation_rosters"
         android:name="com.example.peakplays.RostersFragment"
         android:label="@string/rosters" />
-    
+
     <fragment
         android:id="@+id/navigation_schedules"
         android:name="com.example.peakplays.SchedulesFragment"
         android:label="@string/schedules" />
-    
+
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.peakplays.ui.settings.SettingsFragment"
         android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
-    
+
     <fragment
         android:id="@+id/navigation_team_roster"
         android:name="com.example.peakplays.TeamRosterFragment"
@@ -42,7 +42,7 @@
             android:name="team"
             app:argType="com.example.peakplays.models.Team" />
     </fragment>
-    
+
     <fragment
         android:id="@+id/navigation_league_details"
         android:name="com.example.peakplays.LeagueDetailsFragment"
@@ -52,13 +52,13 @@
             android:name="league"
             app:argType="com.example.peakplays.models.League" />
     </fragment>
-    
+
     <fragment
         android:id="@+id/navigation_team_schedule"
         android:name="com.example.peakplays.TeamScheduleFragment"
         android:label="Team Schedule"
         tools:layout="@layout/fragment_team_schedule" />
-    
+
     <!-- Add your navigation destinations here -->
-    
+
 </navigation> 

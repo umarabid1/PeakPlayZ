@@ -27,7 +27,7 @@ object LocaleHelper {
 
         val config = Configuration(context.resources.configuration)
         config.setLocale(locale)
-        
+
         val localeList = LocaleList(locale)
         LocaleList.setDefault(localeList)
         config.setLocales(localeList)
@@ -46,7 +46,7 @@ object LocaleHelper {
 
     fun saveLanguageCode(context: Context, languageCode: String) {
         Log.d(TAG, "Saving language code: $languageCode")
-        
+
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             .edit()
             .putString(PREF_LANGUAGE, languageCode)
@@ -55,7 +55,7 @@ object LocaleHelper {
 
     fun getLanguageCode(context: Context): String {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        return prefs.getString(PREF_LANGUAGE, null) 
+        return prefs.getString(PREF_LANGUAGE, null)
             ?: context.resources.configuration.locales[0].language
     }
 
@@ -63,14 +63,14 @@ object LocaleHelper {
     fun setLocale(activity: Activity, languageCode: String) {
         // Save the new language code
         saveLanguageCode(activity, languageCode)
-        
+
         // Update the locale
         val locale = createLocale(languageCode)
         Locale.setDefault(locale)
 
         val config = Configuration(activity.resources.configuration)
         config.setLocale(locale)
-        
+
         val localeList = LocaleList(locale)
         LocaleList.setDefault(localeList)
         config.setLocales(localeList)
@@ -78,9 +78,9 @@ object LocaleHelper {
 
         // Restart the app completely
         val intent = Intent(activity, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or 
-                       Intent.FLAG_ACTIVITY_CLEAR_TASK or
-                       Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.startActivity(intent)
         activity.finish()
     }

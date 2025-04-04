@@ -65,12 +65,12 @@
         <item name="boxStrokeColor">@color/white</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
-        
+
         <!-- Text colors -->
         <item name="hintTextColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="endIconTint">@color/white</item>
-        
+
         <!-- Force white text color for the EditText -->
         <item name="editTextStyle">@style/Widget.App.TextInputEditText</item>
         <item name="android:textColor">@color/white</item>
@@ -82,13 +82,13 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textColorHighlight">@color/white_30_percent</item>
-        
+
         <!-- Cursor and selection handles -->
         <item name="android:textCursorDrawable">@drawable/white_cursor</item>
         <item name="android:textSelectHandle">@drawable/white_cursor</item>
         <item name="android:textSelectHandleLeft">@drawable/white_cursor</item>
         <item name="android:textSelectHandleRight">@drawable/white_cursor</item>
-        
+
         <!-- Background -->
         <item name="android:backgroundTint">@android:color/transparent</item>
         <item name="android:background">@android:color/transparent</item>

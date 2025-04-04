@@ -15,14 +15,14 @@ class PeakPlaysApplication : Application() {
         val savedLanguage = prefs.getString(LocaleHelper.PREF_LANGUAGE, null)
         Log.d(TAG, "onCreate - Saved language: $savedLanguage")
         Log.d(TAG, "onCreate - Current locale: ${resources.configuration.locales[0]}")
-        
+
         if (savedLanguage != null) {
             LocaleHelper.setLocale(this)
         }
-        
+
         super.onCreate()
         FirebaseApp.initializeApp(this)
-        
+
         Log.d(TAG, "After onCreate - Current locale: ${resources.configuration.locales[0]}")
     }
 

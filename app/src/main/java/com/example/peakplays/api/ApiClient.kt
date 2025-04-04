@@ -10,4 +10,4 @@ object ApiClient {
         .build()
 
     val sportsApi: SportsApi = retrofit.create(SportsApi::class.java)
-} 
+}

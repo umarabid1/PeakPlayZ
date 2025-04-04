@@ -14,4 +14,4 @@ class App : Application() {
         super.onConfigurationChanged(newConfig)
         LocaleHelper.setLocale(this)
     }
-} 
+}

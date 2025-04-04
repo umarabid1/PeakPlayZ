@@ -8,35 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import android.view.Window
 import android.view.WindowManager
-import android.os.Build
-import android.view.WindowInsets
-import android.view.WindowInsetsController
-import android.util.Log
 
 class NewsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        // Modern way to handle window flags
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.setDecorFitsSystemWindows(false)
-            window.insetsController?.let {
-                it.hide(WindowInsets.Type.statusBars())
-                it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-            }
-        } else {
-            @Suppress("DEPRECATION")
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
-        
+
+        // Hide the title bar completely
+        window.requestFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
         // Make sure there's no action bar
         supportActionBar?.hide()
         actionBar?.hide()
-        
+
         // Set content view after removing title
         setContentView(R.layout.activity_news)
 
@@ -49,38 +37,30 @@ class NewsActivity : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
 
-        // Use string resource for title
-        findViewById<TextView>(R.id.titleText)?.text = getString(R.string.latest_sports_news)
+        // Find and update the title in the custom toolbar
+        findViewById<TextView>(R.id.titleText)?.text = "Latest in Sports News"
 
         setupClickListeners()
-
-        if (savedInstanceState == null) {
-            Log.d("NewsActivity", "Creating new NewsFragment")
-            val fragment = NewsFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .commit()
-        }
     }
 
     override fun onTitleChanged(title: CharSequence?, color: Int) {
-        super.onTitleChanged(getString(R.string.latest_sports_news), color)
+        super.onTitleChanged("Latest in Sports News", color)
     }
 
     override fun onResume() {
         super.onResume()
         // Set title again in onResume
-        title = getString(R.string.latest_sports_news)
-        actionBar?.title = getString(R.string.latest_sports_news)
-        supportActionBar?.title = getString(R.string.latest_sports_news)
+        title = "Latest in Sports News"
+        actionBar?.title = "Latest in Sports News"
+        supportActionBar?.title = "Latest in Sports News"
     }
 
     override fun onPostResume() {
         super.onPostResume()
         // Try one more time in onPostResume
-        title = getString(R.string.latest_sports_news)
-        actionBar?.title = getString(R.string.latest_sports_news)
-        supportActionBar?.title = getString(R.string.latest_sports_news)
+        title = "Latest in Sports News"
+        actionBar?.title = "Latest in Sports News"
+        supportActionBar?.title = "Latest in Sports News"
     }
 
     private fun setupClickListeners() {
@@ -94,7 +74,7 @@ class NewsActivity : AppCompatActivity() {
         )
 
         cardIds.forEach { id ->
-            findViewById<CardView>(id).setOnClickListener { 
+            findViewById<CardView>(id).setOnClickListener {
                 handleNewsCardClick(id)
             }
         }

@@ -28,12 +28,12 @@ class SchedulesFragment : Fragment() {
     private val viewModel: TeamsViewModel by activityViewModels()
     private val leagueSections = mutableMapOf<League, LeagueSectionBinding>()
 
-    override fun onCreateView(
+    override  fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        Log.d("SchedulesFragment", "onCreateView called")
+        Log.d("SchedulesFragm  ent", "onCreateView called")
         _binding = FragmentSchedulesBinding.inflate(inflater, container, false)
         setupLeagueSections()
         return binding.root
@@ -65,7 +65,7 @@ class SchedulesFragment : Fragment() {
 
     private fun setupLeagueSections() {
         binding.leaguesContainer.removeAllViews()
-        
+
         viewLifecycleOwner.lifecycleScope.launch {
             League.values().forEach { league ->
                 val sectionBinding = LeagueSectionBinding.inflate(
@@ -73,15 +73,15 @@ class SchedulesFragment : Fragment() {
                     binding.leaguesContainer,
                     true
                 )
-                
+
                 with(sectionBinding) {
                     leagueHeader.text = league.displayName
-                    
+
                     teamsRecyclerView.apply {
                         layoutManager = LinearLayoutManager(context)
                         visibility = View.GONE
                     }
-                    
+
                     var isExpanded = false
                     headerContainer.setOnClickListener {
                         isExpanded = !isExpanded
@@ -90,10 +90,10 @@ class SchedulesFragment : Fragment() {
                             .rotation(if (isExpanded) 180f else 0f)
                             .setDuration(200)
                             .start()
-                        
+
                         if (isExpanded && teamsRecyclerView.adapter == null) {
                             progressBar.visibility = View.VISIBLE
-                            
+
                             // Use the pre-loaded teams from ViewModel
                             val teams = viewModel.teamsMap.value[league]
                             if (!teams.isNullOrEmpty()) {
@@ -109,7 +109,7 @@ class SchedulesFragment : Fragment() {
                         }
                     }
                 }
-                
+
                 leagueSections[league] = sectionBinding
             }
 

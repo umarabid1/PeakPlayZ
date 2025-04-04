@@ -14,7 +14,7 @@ import java.util.Locale
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,7 +43,7 @@ class HomeFragment : Fragment() {
     private fun updateLocale(context: Context, locale: Locale) {
         Locale.setDefault(locale)
         val config = context.resources.configuration
-        
+
         // Replace deprecated calls with newer API
         config.setLocale(locale)
         context.createConfigurationContext(config)
@@ -62,4 +62,4 @@ class HomeFragment : Fragment() {
         val prefs = context.getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
         prefs.edit().putString("language_code", languageCode).apply()
     }
-} 
+}

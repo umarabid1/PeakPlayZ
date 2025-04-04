@@ -10,8 +10,13 @@ interface SportsApi {
     @GET("lookup_all_teams.php")
     suspend fun getTeamsByLeague(@Query("id") leagueId: String): TeamSearchResponse
 
+    @GET("eventsnext.php")
+    suspend fun getTeamSch(@Query("id") teamId: String): TeamSchResponse
+
+
     companion object {
-        const val BASE_URL = "https://www.thesportsdb.com/api/v1/json/002930/"
+        const val BASE_URL = "https://www.thesportsdb.com/api/v1/json/002930/" ///api/v1/json/3/lookupteam.php?id=133604
+
     }
 }
 
@@ -23,5 +28,19 @@ data class TeamData(
     val idTeam: String,
     val strTeam: String,
     val strBadge: String,
-    val strLeague: String
-) 
+    val strLeague: String,
+
+
+    )
+
+
+data class TeamSchResponse(
+    val events: List<TeamSch>
+)
+
+data class TeamSch(
+    val idEvent: String,
+    val strEvent: String,
+    val dateEvent: String,
+
+    )

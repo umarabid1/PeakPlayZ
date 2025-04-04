@@ -80,7 +80,7 @@
     <string name="country_hint">Seleccione su país</string>
     <string name="title_home">Inicio</string>
     <string name="favorite_teams_leagues">Equipos/Ligas Favoritos</string>
-    
+
     <!-- Home page headers -->
     <string name="leagues_header">Ligas</string>
     <string name="top_headlines_header">Resultados en Vivo</string>

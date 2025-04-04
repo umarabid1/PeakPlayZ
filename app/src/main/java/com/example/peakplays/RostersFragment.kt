@@ -65,7 +65,7 @@ class RostersFragment : Fragment() {
 
     private fun setupLeagueSections() {
         binding.leaguesContainer.removeAllViews()
-        
+
         viewLifecycleOwner.lifecycleScope.launch {
             League.values().forEach { league ->
                 val sectionBinding = LeagueSectionBinding.inflate(
@@ -73,15 +73,15 @@ class RostersFragment : Fragment() {
                     binding.leaguesContainer,
                     true
                 )
-                
+
                 with(sectionBinding) {
                     leagueHeader.text = league.displayName
-                    
+
                     teamsRecyclerView.apply {
                         layoutManager = LinearLayoutManager(context)
                         visibility = View.GONE
                     }
-                    
+
                     var isExpanded = false
                     headerContainer.setOnClickListener {
                         isExpanded = !isExpanded
@@ -90,10 +90,10 @@ class RostersFragment : Fragment() {
                             .rotation(if (isExpanded) 180f else 0f)
                             .setDuration(200)
                             .start()
-                        
+
                         if (isExpanded && teamsRecyclerView.adapter == null) {
                             progressBar.visibility = View.VISIBLE
-                            
+
                             // Use the pre-loaded teams from ViewModel
                             val teams = viewModel.teamsMap.value[league]
                             if (!teams.isNullOrEmpty()) {
@@ -109,7 +109,7 @@ class RostersFragment : Fragment() {
                         }
                     }
                 }
-                
+
                 leagueSections[league] = sectionBinding
             }
 

@@ -29,7 +29,7 @@ class TeamAdapter(
         val team = teams[position]
         holder.binding.apply {
             teamName.text = team.name
-            
+
             // Load team logo using Glide with proper error handling
             Glide.with(teamLogo.context)
                 .load(team.logoUrl)
