@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">PeakPlays</string>
+    <string name="app_name">PeakPlayZZ</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -172,4 +172,16 @@
     <string name="player_details">Player Details</string>
     <string name="player_number_format">#%s</string>
     <string name="player_detail_separator"> • </string>
+
+    <string name="no_players_found">No players found for %1$s</string>
+    <string name="error_loading_roster">Error loading roster</string>
+    <string name="unknown_position">Unknown</string>
+    <string name="not_available">N/A</string>
+    <string name="player_name">%1$s</string>
+    <string name="player_position">Position: %1$s</string>
+    <string name="player_number">#%1$s</string>
+    <string name="player_height">Height: %1$s</string>
+    <string name="player_weight">Weight: %1$s</string>
+    <string name="player_nationality">Nationality: %1$s</string>
+    <string name="player_dob">DOB: %1$s</string>
 </resources>
