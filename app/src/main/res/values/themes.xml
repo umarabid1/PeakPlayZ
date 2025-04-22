@@ -1,0 +1,105 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.PeakPlayz" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/button_color</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Bottom Navigation style -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <!-- Make the app full screen -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.PeakPlays" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/light_galaxy_purple</item>
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
+    </style>
+
+    <style name="Theme.PeakPlays.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar" />
+
+    <style name="Theme.PeakPlays.PopupOverlay" parent="ThemeOverlay.Material3.Light" />
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+        <item name="itemIconTint">@android:color/white</item>
+        <item name="itemTextColor">@android:color/white</item>
+        <item name="itemIconSize">28dp</item>
+        <item name="itemPaddingTop">6dp</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.App.BottomNavigation</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.App.BottomNavigation</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemPaddingBottom">8dp</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemBackground">@null</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:spacing">16dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">@color/button_color</item>
+        <item name="colorOnSurface">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.App.BottomNavigation" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Box/Border colors -->
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        
+        <!-- Text colors -->
+        <item name="hintTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="endIconTint">@color/white</item>
+        
+        <!-- Force white text color for the EditText -->
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+    </style>
+
+    <style name="Widget.App.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <!-- Text colors -->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorHighlight">@color/white_30_percent</item>
+        
+        <!-- Cursor and selection handles -->
+        <item name="android:textCursorDrawable">@drawable/white_cursor</item>
+        <item name="android:textSelectHandle">@drawable/white_cursor</item>
+        <item name="android:textSelectHandleLeft">@drawable/white_cursor</item>
+        <item name="android:textSelectHandleRight">@drawable/white_cursor</item>
+        
+        <!-- Background -->
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxStrokeColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="hintTextColor">@android:color/white</item>
+        <item name="endIconTint">@android:color/white</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+</resources>

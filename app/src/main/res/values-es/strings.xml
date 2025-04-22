@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">PeakPlayz</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Encabezado de navegación</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="menu_transform">Transformar</string>
+    <string name="menu_reflow">Reflujo</string>
+    <string name="menu_slideshow">Presentación</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="menu_home">Inicio</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="lorem_ipsum">Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica.</string>
+    <string name="fab_content_description">Representa una vista para invocar una acción</string>
+    <string name="image_view_item_transform_content_description">Representa una vista de imagen en el elemento</string>
+    <string name="app_logo">Logo de la aplicación</string>
+    <string name="home">Inicio</string>
+    <string name="news">Noticias</string>
+    <string name="rosters">Equipos</string>
+    <string name="schedules">Horarios</string>
+    <string name="home_fragment_title">Fragmento de Inicio</string>
+    <string name="language_title">Idioma</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="enable_notifications">Activar notificaciones</string>
+    <string name="settings">Ajustes</string>
+    <!-- Sign In/Auth related strings -->
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="sign_in_title">Iniciar Sesión</string>
+    <string name="username_email">Usuario/Email:</string>
+    <string name="username_email_hint">Ingrese su usuario o email</string>
+    <string name="password">Contraseña:</string>
+    <string name="password_hint">Ingrese su contraseña</string>
+    <string name="forgot_password">¿Olvidó su contraseña?</string>
+    <string name="create_account_prompt">¿No tiene una cuenta?\nCree una aquí</string>
+    <string name="sign_in_button">Iniciar\nSesión</string>
+    <!-- Other translations... -->
+    <string name="additional_leagues">¡Equipos/Ligas Favoritos!</string>
+    <string name="live_score">¡Gran Evento! Marcador en Vivo</string>
+    <string name="changing_language">Cambiando idioma…</string>
+    <string name="enable_notifications_message">Para recibir notificaciones, debe habilitarlas en la configuración del sistema.</string>
+    <string name="disable_notifications_message">Para deshabilitar las notificaciones, debe desactivarlas en la configuración del sistema.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="keep_enabled">Mantener activado</string>
+    <string name="disable_notifications">Desactivar notificaciones</string>
+    <!-- Password Reset Page -->
+    <string name="reset_password_title">Restablecer Contraseña</string>
+    <string name="reset_password">Restablecer Contraseña</string>
+    <string name="reset_password_instruction">Ingrese su correo electrónico para restablecer su contraseña</string>
+    <string name="email_address">Correo Electrónico:</string>
+    <string name="email_hint">Ingrese su correo electrónico</string>
+    <string name="reset_password_button">Restablecer Contraseña</string>
+    <string name="back_to_sign_in">Volver a Iniciar Sesión</string>
+    <string name="reset_email_sent">Se ha enviado el correo de restablecimiento</string>
+    <string name="reset_email_error">Error al enviar el correo de restablecimiento</string>
+
+    <!-- Create Account Page -->
+    <string name="create_account_title">Crear Cuenta</string>
+    <string name="full_name">Nombre Completo:</string>
+    <string name="full_name_hint">Ingrese su nombre completo</string>
+    <string name="email">Correo Electrónico:</string>
+    <string name="confirm_password">Confirmar Contraseña:</string>
+    <string name="confirm_password_hint">Confirme su contraseña</string>
+    <string name="create_account_button">Crear Cuenta</string>
+    <string name="already_have_account">¿Ya tiene una cuenta? Inicie sesión aquí</string>
+    <string name="passwords_dont_match">Las contraseñas no coinciden</string>
+    <string name="account_created">Cuenta creada exitosamente</string>
+    <string name="account_creation_error">Error al crear la cuenta</string>
+
+    <!-- Add before the closing </resources> -->
+    <string name="first_name">Nombre:</string>
+    <string name="first_name_hint">Ingrese su nombre</string>
+    <string name="last_name">Apellido:</string>
+    <string name="last_name_hint">Ingrese su apellido</string>
+    <string name="phone_number">Número de Teléfono:</string>
+    <string name="phone_hint">Ingrese su número de teléfono</string>
+    <string name="country">País de Residencia:</string>
+    <string name="country_hint">Seleccione su país</string>
+    <string name="title_home">Inicio</string>
+    <string name="favorite_teams_leagues">Equipos/Ligas Favoritos</string>
+    
+    <!-- Home page headers -->
+    <string name="leagues_header">Ligas</string>
+    <string name="top_headlines_header">Resultados en Vivo</string>
+    <string name="headline_1">El Manchester United logra una victoria dramática en los últimos minutos</string>
+    <string name="headline_2">Los Lakers dominan a los Warriors en el partido inaugural</string>
+    <string name="headline_3">Roger Federer anuncia nuevo programa de desarrollo del tenis</string>
+    <string name="headline_4">Playoffs MLB: Sorpresa inesperada en la serie divisional</string>
+    <string name="headline_5">Fórmula 1: Nuevos récords de pista establecidos en la clasificación</string>
+    <string name="headline_6">Liga de Campeones: Resultados sorprendentes alteran la clasificación</string>
+    <string name="headline_7">Fecha límite de traspasos NFL: Grandes movimientos impactan la carrera a playoffs</string>
+    <string name="headline_8">NBA: Estrella emergente rompe récord de puntuación</string>
+    <string name="headline_9">Premier League: La lucha por el título se intensifica con resultados inesperados</string>
+    <string name="headline_10">Juegos Olímpicos: Nuevos deportes añadidos para 2028</string>
+
+    <!-- League Buttons -->
+    <string name="league_button_1">NFL</string>
+    <string name="league_button_2">NBA</string>
+    <string name="league_button_3">MLB</string>
+    <string name="league_button_4">NHL</string>
+    <string name="league_button_5">Fútbol</string>
+    <string name="league_button_6">F1</string>
+    <string name="league_button_7">Tenis</string>
+    <string name="league_button_8">Golf</string>
+    <string name="league_button_9">UFC</string>
+
+    <string name="back_button">Atrás</string>
+    <string name="sign_out">Cerrar Sesión</string>
+</resources> 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.peakplays.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_rosters"
+        android:name="com.example.peakplays.RostersFragment"
+        android:label="Rosters"
+        tools:layout="@layout/fragment_rosters">
+        <action
+            android:id="@+id/action_rosters_to_team_roster"
+            app:destination="@id/navigation_team_roster" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_team_roster"
+        android:name="com.example.peakplays.TeamRosterFragment"
+        android:label="Team Roster"
+        tools:layout="@layout/fragment_team_roster">
+        <argument
+            android:name="team"
+            app:argType="com.example.peakplays.models.Team" />
+    </fragment>
+
+</navigation> 

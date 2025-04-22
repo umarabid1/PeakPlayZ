@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text sizes in sp -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+
+    <!-- Margins and padding in dp -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+
+    <!-- Specific dimensions -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+
+    <!-- Default screen margins -->
+    <dimen name="top_bar_height">40dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="time_text_size">14sp</dimen>
+    <dimen name="padding_horizontal">16dp</dimen>
+
+    <!-- Score bar dimensions -->
+    <dimen name="score_bar_height">64dp</dimen>
+    <dimen name="leagues_bar_height">32dp</dimen>
+    <dimen name="score_text_size">16sp</dimen>
+    <dimen name="leagues_text_size">14sp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="item_transform_image_length">120dp</dimen>
+</resources>
